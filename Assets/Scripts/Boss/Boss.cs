@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Boss : MonoBehaviour, IDamagable
 {
-    private FireSystem _fireSystem = null;
+    private FireSystem<BossBullet> _fireSystem = null;
 
     [Header("ステータス")]
     [SerializeField]
@@ -54,9 +54,7 @@ public class Boss : MonoBehaviour, IDamagable
         currentHp = maxHp;
         _hpBar.Init();
 
-        _fireSystem = new FireSystem(transform, GameObject.FindWithTag("Player").GetComponent<Transform>(), transform);
-
-        //_fireSystem.Init(transform, GameObject.FindWithTag("Player").GetComponent<Transform>(), transform);
+        _fireSystem = new FireSystem<BossBullet>(transform, GameObject.FindWithTag("Player").GetComponent<Transform>(), transform, BBulletPool.Instance);
 
         _stateNotifier = notifier;
 
@@ -133,12 +131,5 @@ public class Boss : MonoBehaviour, IDamagable
     {
         _stateMachine.StopState();
     }
-
-    private void OnDestroy()
-    {
-        //メモリリークを防ぐために、リスナーの解除
-        _stateNotifier.RemoveAllListener();
-    }
-
 }
 

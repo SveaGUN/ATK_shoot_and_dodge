@@ -15,26 +15,7 @@ public class GameStateNotifier
         _stageClearListener += stageClear;
     }
 
-    /// <summary>
-    /// ゲームオーバーの通知を行う
-    /// </summary>
-    public void NotifyGameOver()
-    {
-        _gameOverListener?.Invoke();
-    }
-
-    /// <summary>
-    /// ステージクリアの通知を行う
-    /// </summary>
-    public void NotifyStageClear()
-    {
-        _stageClearListener?.Invoke();
-    }
-
-    /// <summary>
-    /// 登録されているすべてのリスナーを解除する
-    /// </summary>
-    public void RemoveAllListener()
+    ~GameStateNotifier()
     {
         if (_gameOverListener != null)
         {
@@ -51,5 +32,21 @@ public class GameStateNotifier
                 _stageClearListener -= (Action)d;
             }
         }
+    }
+
+    /// <summary>
+    /// ゲームオーバーの通知を行う
+    /// </summary>
+    public void NotifyGameOver()
+    {
+        _gameOverListener?.Invoke();
+    }
+
+    /// <summary>
+    /// ステージクリアの通知を行う
+    /// </summary>
+    public void NotifyStageClear()
+    {
+        _stageClearListener?.Invoke();
     }
 }

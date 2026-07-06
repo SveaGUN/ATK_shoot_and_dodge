@@ -1,4 +1,4 @@
-[System.Serializable]//Editorè„Ç©ÇÁå©Ç¶ÇÈÇÊÇ§Ç…Ç∑ÇÈ
+[System.Serializable]
 public class BossStateData
 {
     public enum StateType
@@ -18,6 +18,4 @@ public class BossStateData
     public StateType nextState = StateType.Idle;
 
     public float stateTime = 0f;
-
-    //public 
 }

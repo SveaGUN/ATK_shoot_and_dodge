@@ -3,7 +3,7 @@ using System;
 public class StateSpecial : IBossState
 {
     private readonly Action _action = null;
-    private readonly FireSystem _fireSystem = null;
+    private readonly FireSystem<BossBullet> _fireSystem = null;
     private readonly float _stateTime = 0;
 
     private float _currentTime = 0;
@@ -16,7 +16,7 @@ public class StateSpecial : IBossState
     private const float _fireInterval1 = 0.05f;
     private const float _fireInterval2 = 2f;
 
-    public StateSpecial(Action action, FireSystem fireSystem, float stateTime)
+    public StateSpecial(Action action, FireSystem<BossBullet> fireSystem, float stateTime)
     {
         _action = action;
         _fireSystem = fireSystem;

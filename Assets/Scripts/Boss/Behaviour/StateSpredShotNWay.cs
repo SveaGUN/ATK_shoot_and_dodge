@@ -3,7 +3,7 @@ using System;
 public class StateSpredShotNWay : IBossState
 {
     private readonly Action _action = null;
-    private readonly FireSystem _fireSystem = null;
+    private readonly FireSystem<BossBullet> _fireSystem = null;
     private readonly float _stateTime = 0;
 
     private float _currentTime = 0;
@@ -11,7 +11,7 @@ public class StateSpredShotNWay : IBossState
 
     private const float _fireInterval = 0.5f;
 
-    public StateSpredShotNWay(Action action, FireSystem fireSystem, float stateTime)
+    public StateSpredShotNWay(Action action, FireSystem<BossBullet> fireSystem, float stateTime)
     {
         _action = action;
         _fireSystem = fireSystem;

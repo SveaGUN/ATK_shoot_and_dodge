@@ -1,78 +1,48 @@
 using UnityEngine;
 using UnityEngine.Pool;
 
-public class BBulletPool : MonoBehaviour
+public class BBulletPool : MonoBehaviour, IBulletPool<BossBullet>
 {
-    //シングルトン
-    private static BBulletPool instance;
-    public static BBulletPool Instance
+    public static BBulletPool Instance { get; private set; } = null;
+
+    [SerializeField, Tooltip("オブジェクトプールで管理するオブジェクト")]
+    private BossBullet _bullet = null;
+
+    private ObjectPool<BossBullet> _pool = null;
+
+    private void Awake()
     {
-        get
-        {
-            if (instance == null)
-            {
-                instance = FindFirstObjectByType<BBulletPool>();
-            }
+        if (Instance == null) { Instance = this; }
 
-            return instance;
-        }
-    }
-
-    [SerializeField]
-    [Tooltip("オブジェクトプールで管理するオブジェクト")]
-    private BossBullet bullet;
-
-    private ObjectPool<BossBullet> pool;
-
-    private int count = 0;
-
-    private void Awake()//オブジェクトプールの初期化
-    {
-        pool = new ObjectPool<BossBullet>(
-            CreatePooledItem,
-            TakeFromPool,
-            ReturnedToPool,
-            DestroyPooledObject,
+        //オブジェクトプールの初期化
+        _pool = new ObjectPool<BossBullet>(
+            CreatePooledObject,
+            OnGet,
+            OnRelease,
+            OnDestory,
             false,
             75,//通常のキャパシティ
             300//maxサイズ
             );
     }
 
-    private BossBullet CreatePooledItem()//プールに空きがない時にオブジェクトを生成する
-    {
-        count++;
-        return Instantiate(bullet, transform);
-    }
+    public BossBullet GetBullet() => _pool.Get();
 
-    private void TakeFromPool(BossBullet obj)//プールに空きがあるときの処理
-    {
-        obj.gameObject.SetActive(true);
-    }
+    public void ReleaseBullet(BossBullet obj) => _pool.Release(obj);
 
-    private void ReturnedToPool(BossBullet obj)//プールに返却するときの処理
-    {
-        obj.gameObject.SetActive(false);
-    }
+    //プールに空きがない時にオブジェクトを生成する
+    private BossBullet CreatePooledObject() => Instantiate(_bullet, transform);
 
-    private void DestroyPooledObject(BossBullet obj)//Maxのサイズより大きくなった時に破棄する処理
+    //プールに空きがあるときの処理
+    private void OnGet(BossBullet obj) => obj.gameObject.SetActive(true);
+
+    //プールに返却するときの処理
+    private void OnRelease(BossBullet obj)=> obj.gameObject.SetActive(false);
+
+    //Maxのサイズより大きくなった時に破棄する処理
+    private void OnDestory(BossBullet obj)
     {
-        count--;
         Destroy(obj);
-    }
-
-    public BossBullet GetBullet()
-    {
-        return pool.Get();
-    }
-
-    public void ReleaseBullet(BossBullet obj)
-    {
-        pool.Release(obj);
-    }
-
-    private void FixedUpdate()
-    {
-        //Debug.Log("enemy bullets : " + count);
+        obj = null;
     }
 }

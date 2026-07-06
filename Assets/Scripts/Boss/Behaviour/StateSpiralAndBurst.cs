@@ -4,7 +4,7 @@ using System;
 public class StateSpiralAndBurst : IBossState
 {
     private readonly Action _action = null;
-    private readonly FireSystem _fireSystem = null;
+    private readonly FireSystem<BossBullet> _fireSystem = null;
     private readonly float _stateTime = 0;
 
     private float _currentTime = 0;
@@ -15,7 +15,7 @@ public class StateSpiralAndBurst : IBossState
     private const float _spiralInterval = 0.03f; // スパイラル弾間隔
     private const float _burstInterval = 1.5f;   // バースト攻撃間隔
 
-    public StateSpiralAndBurst(Action action, FireSystem fireSystem, float stateTime)
+    public StateSpiralAndBurst(Action action, FireSystem<BossBullet> fireSystem, float stateTime)
     {
         _action = action;
         _fireSystem = fireSystem;

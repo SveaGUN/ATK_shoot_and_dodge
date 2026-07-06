@@ -10,7 +10,7 @@ public class BossStateFactory
     /// <param name="stateTime"></param>
     /// <returns></returns>
     /// <exception cref="ArgumentOutOfRangeException"></exception>
-    public IBossState CreateState(Action action, FireSystem fireSystem, BossStateData.StateType type, float stateTime) => type switch
+    public IBossState CreateState(Action action, FireSystem<BossBullet> fireSystem, BossStateData.StateType type, float stateTime) => type switch
     {
         BossStateData.StateType.Debug => new StateDebug(action, fireSystem, stateTime),
 

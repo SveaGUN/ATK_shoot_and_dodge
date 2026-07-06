@@ -1,71 +1,45 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Pool;
 
-public class PBulletPool : MonoBehaviour
+public class PBulletPool : MonoBehaviour, IBulletPool<PlayerBullet>
 {
-    //シングルトン
-    private static PBulletPool instance;
-    public static PBulletPool Instance
-    {
-        get
-        {
-            if (instance == null)
-            {
-                instance = FindFirstObjectByType<PBulletPool>();
-            }
+    public static PBulletPool Instance { get; private set; } = null;
 
-            return instance;
-        }
-    }
+    [SerializeField, Tooltip("オブジェクトプールで管理するオブジェクト")]
+    private PlayerBullet _bullet = null;
 
-    [SerializeField]
-    [Tooltip("オブジェクトプールで管理するオブジェクト")]
-    private PlayerBullet bullet;
-
-    private ObjectPool<PlayerBullet> pool;
+    private ObjectPool<PlayerBullet> _pool = null;
 
     private void Awake()//オブジェクトプールの初期化
     {
-        pool = new ObjectPool<PlayerBullet>(
-            CreatePooledItem,
-            TakeFromPool,
-            ReturnedToPool,
-            DestroyPooledObject,
+        _pool = new ObjectPool<PlayerBullet>(
+            CreatePooledObject,
+            OnGet,
+            OnRelease,
+            OnDestory,
             false,
             15,//通常のキャパシティ
             30//maxサイズ
             );
     }
 
-    private PlayerBullet CreatePooledItem()//プールに空きがない時にオブジェクトを生成する
-    {
-        return Instantiate(bullet, transform);
-    }
+    public PlayerBullet GetBullet() => _pool.Get();
 
-    private void TakeFromPool(PlayerBullet obj)//プールに空きがあるときの処理
-    {
-        obj.gameObject.SetActive(true);
-    }
+    public void ReleaseBullet(PlayerBullet obj) => _pool.Release(obj);
 
-    private void ReturnedToPool(PlayerBullet obj)//プールに返却するときの処理
-    {
-        obj.gameObject.SetActive(false);
-    }
+    //プールに空きがない時にオブジェクトを生成する
+    private PlayerBullet CreatePooledObject() => Instantiate(_bullet, transform);
 
-    private void DestroyPooledObject(PlayerBullet obj)//Maxのサイズより大きくなった時に破棄する処理
+    //プールに空きがあるときの処理
+    private void OnGet(PlayerBullet obj) => obj.gameObject.SetActive(true);
+
+    //プールに返却するときの処理
+    private void OnRelease(PlayerBullet obj) => obj.gameObject.SetActive(false);
+
+    //Maxのサイズより大きくなった時に破棄する処理
+    private void OnDestory(PlayerBullet obj)
     {
         Destroy(obj);
-    }
-
-    public PlayerBullet GetBullet()
-    {
-        return pool.Get();
-    }
-
-    public void ReleaseBullet(PlayerBullet obj)
-    {
-        pool.Release(obj);
+        obj = null;
     }
 }
