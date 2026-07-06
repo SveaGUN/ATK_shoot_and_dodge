@@ -37,12 +37,17 @@ public class BBulletPool : MonoBehaviour, IBulletPool<BossBullet>
     private void OnGet(BossBullet obj) => obj.gameObject.SetActive(true);
 
     //プールに返却するときの処理
-    private void OnRelease(BossBullet obj)=> obj.gameObject.SetActive(false);
+    private void OnRelease(BossBullet obj) => obj.gameObject.SetActive(false);
 
     //Maxのサイズより大きくなった時に破棄する処理
     private void OnDestory(BossBullet obj)
     {
+#if UNITY_EDITOR
+        if (Application.isPlaying) { Destroy(obj); }
+        else { DestroyImmediate(obj); }
+#else
         Destroy(obj);
+#endif
         obj = null;
     }
 }

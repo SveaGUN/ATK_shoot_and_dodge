@@ -152,11 +152,9 @@ public class Player : MonoBehaviour, IDamagable
             var bullet = PBulletPool.Instance.GetBullet();
             bullet.transform.position = _firePoint.position;
             //マウスポインタの方向ベクトル
-            var tm = p - bullet.transform.position;
-            //角度をマウスポインタに合わせる
-            var r = Mathf.Atan2(tm.y, tm.x) * Mathf.Rad2Deg;
-            bullet.transform.rotation = Quaternion.Euler(0, 0, r);
-            bullet.SetDirection();
+            var tm = (p - bullet.transform.position).normalized;
+
+            bullet.Init(new Vector2(tm.x, tm.y));
 
             _ft = 0f;
         }

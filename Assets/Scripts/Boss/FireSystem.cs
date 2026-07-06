@@ -1,4 +1,5 @@
 using UnityEngine;
+using static UnityEngine.GraphicsBuffer;
 
 public class FireSystem<T> where T : BaseBullet
 {
@@ -18,10 +19,9 @@ public class FireSystem<T> where T : BaseBullet
     //===========ヘルパー===========
     private Vector2 GetDirectionToTarget()
     {
-        //ターゲットへの方向ベクトル
-        var tp = _target.position - _self.position;
+        var direction = _target.position - _self.position;
 
-        return (Vector2)tp;
+        return new Vector2(direction.x, direction.y);
     }
 
     private Vector2 AngleToDirection(float angleDeg)
@@ -30,7 +30,7 @@ public class FireSystem<T> where T : BaseBullet
         return new Vector2(Mathf.Cos(rad), Mathf.Sin(rad));
     }
 
-    private float DirectionToAngle(Vector2 direction) => Mathf.Atan2(direction.y, direction.x) * Mathf.Deg2Rad;
+    private float DirectionToAngle(Vector2 direction) => Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
     private void Fire(Vector2 direction, float speed)
     {

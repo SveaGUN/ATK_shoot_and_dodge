@@ -12,6 +12,8 @@ public class PBulletPool : MonoBehaviour, IBulletPool<PlayerBullet>
 
     private void Awake()//オブジェクトプールの初期化
     {
+        if(Instance == null) { Instance = this; }
+
         _pool = new ObjectPool<PlayerBullet>(
             CreatePooledObject,
             OnGet,
@@ -39,7 +41,12 @@ public class PBulletPool : MonoBehaviour, IBulletPool<PlayerBullet>
     //Maxのサイズより大きくなった時に破棄する処理
     private void OnDestory(PlayerBullet obj)
     {
+#if UNITY_EDITOR
+        if (Application.isPlaying) { Destroy(obj); }
+        else { DestroyImmediate(obj); }
+#else
         Destroy(obj);
+#endif
         obj = null;
     }
 }

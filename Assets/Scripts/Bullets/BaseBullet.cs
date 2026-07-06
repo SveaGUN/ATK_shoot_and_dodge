@@ -9,7 +9,7 @@ public class BaseBullet : MonoBehaviour
     [SerializeField]
     protected float _bulletSpeed = 3f;
 
-    private Vector3 _direction = new Vector3(0, 0, 0);
+    protected Vector3 _direction = new Vector3(0, 0, 0);
 
     private void Update()
     {
@@ -25,11 +25,13 @@ public class BaseBullet : MonoBehaviour
         }
     }
 
-    public void Init(Vector2 direction, float speed)
+    public virtual void Init(Vector2 direction, float speed)
     {
         _bulletSpeed = speed;
         _direction = direction;
     }
+
+    public virtual void Init(Vector2 direction) => _direction = direction;
 
     //’e‚ÌˆÚ“®ƒƒ\ƒbƒh
     protected virtual void Move()
