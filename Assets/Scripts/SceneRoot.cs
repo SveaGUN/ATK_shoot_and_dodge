@@ -1,3 +1,4 @@
+using AkaneTools;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -58,7 +59,7 @@ public class SceneRoot : MonoBehaviour
     {
         StartCoroutine(OnStart());
         //指定した戦闘BGMを再生する
-        AudioPlayer.instance.PlayBGM(battleBgmIndex);
+        AudioManager.Instance.PlayBGM("Battle");
     }
 
     private void Update()
@@ -107,7 +108,7 @@ public class SceneRoot : MonoBehaviour
             gameOverUI.AnimationPlay();
 
             //ゲームオーバー時のBGMを再生する
-            AudioPlayer.instance.PlayBGM(3);
+            AudioManager.Instance.PlayBGM("GameOver");
         }
     }
 
@@ -126,7 +127,7 @@ public class SceneRoot : MonoBehaviour
         var animationLength = animator.GetCurrentAnimatorStateInfo(0).length;
         animator.SetTrigger(outroId);
 
-        AudioPlayer.instance.FadeOutBGM(1 / animationLength);
+        AudioManager.Instance.FadeOutBGM(1 / animationLength);
         //現在再生されているアニメーションの長さに応じて待機する
         yield return new WaitForSeconds(animationLength);
 

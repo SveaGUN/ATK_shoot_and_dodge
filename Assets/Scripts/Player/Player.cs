@@ -1,3 +1,4 @@
+using AkaneTools;
 using UnityEngine;
 
 public class Player : MonoBehaviour, IDamagable
@@ -86,8 +87,7 @@ public class Player : MonoBehaviour, IDamagable
         _currentHp -= damage;
         _hitCount++;
 
-        //ƒvƒŒƒCƒ„[‚Ì”í’eSE‚ğÄ¶
-        AudioPlayer.instance.PlaySE(1);
+        AudioManager.Instance.PlaySE("PlayerHit");
 
         _playerCollider.StartInvincible();
         _hpBar.UpdateFillAmount(_maxHp, _currentHp);
@@ -105,7 +105,7 @@ public class Player : MonoBehaviour, IDamagable
     public void OnPlayerDead()
     {
         //€–S‚ÌSE‚ğÄ¶
-        AudioPlayer.instance.PlaySE(2);
+        AudioManager.Instance.PlaySE("PlayerDestory");
 
         _playerCollider.EndInvincible();
         _playerCollider.DisableCollider();

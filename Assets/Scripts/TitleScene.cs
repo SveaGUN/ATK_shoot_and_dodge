@@ -1,3 +1,4 @@
+using AkaneTools;
 using System.Collections;
 using System.Threading.Tasks;
 using UnityEditor;
@@ -90,7 +91,7 @@ public class TitleScene : MonoBehaviour
     private void Start()
     {
         //タイトルシーンのBGMを再生する
-        AudioPlayer.instance.PlayBGM(0);
+        AudioManager.Instance.PlayBGM("Title");
     }
 
     /// <summary>
@@ -107,7 +108,7 @@ public class TitleScene : MonoBehaviour
         _animator.SetTrigger(s_outroId);
 
         //BGMをフェードアウトさせる。フェードアウトの時間は、アニメーションの長さに応じて変化する
-        AudioPlayer.instance.FadeOutBGM(1 / animationLength);
+        AudioManager.Instance.FadeOutBGM(1 / animationLength);
 
         //現在再生されているアニメーションの長さに応じて待機する
         yield return new WaitForSeconds(animationLength);

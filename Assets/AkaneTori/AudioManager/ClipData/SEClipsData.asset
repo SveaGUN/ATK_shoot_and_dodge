@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09dd80d78cf6a3c4d93608515ae0fbad, type: 3}
+  m_Name: SEClipsData
+  m_EditorClassIdentifier: Assembly-CSharp::AkaneTools.AudioClipsData
+  ClipsDict:
+    _keyValueList:
+    - _key: Demo
+      _value: {fileID: 8300000, guid: d4ddcf0db9b616f43a2e568247f81b4c, type: 3}
+    - _key: PlayerHit
+      _value: {fileID: 8300000, guid: c4540400733e12743ad9a8fc8bd4ff80, type: 3}
+    - _key: PlayerDestory
+      _value: {fileID: 8300000, guid: 20dca1a9930c8e346a80ab9833634f55, type: 3}
