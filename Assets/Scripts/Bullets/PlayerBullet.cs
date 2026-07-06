@@ -7,10 +7,10 @@ public class PlayerBullet : BaseBullet
         //弾が当たった相手がIDamagableを持っている場合は、ダメージを与える
         if (collision.TryGetComponent<IDamagable>(out var d))
         {
-            d.TakeDamage(bulleAtk);
+            d.TakeDamage(_bulleAtk);
         }
 
-        PBulletPool.Instance.ReleaseBullet(this);
         ResetDirection();
+        PBulletPool.Instance.ReleaseBullet(this);
     }
 }

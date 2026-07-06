@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 public class FireSystem<T> where T : BaseBullet
@@ -38,7 +37,7 @@ public class FireSystem<T> where T : BaseBullet
         var bullet = _pool.GetBullet();
         bullet.transform.position = _firePoint.position;
         //bullet.SetDirection(direction); // ← Bullet側もVector2受け取りに変更する想定
-        bullet.SetSpeed(speed);
+        bullet.Init(direction, speed);
     }
     //===========ヘルパー===========
 

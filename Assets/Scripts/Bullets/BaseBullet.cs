@@ -4,47 +4,40 @@ public class BaseBullet : MonoBehaviour
 {
     //攻撃力
     [SerializeField]
-    protected int bulleAtk = 1;
+    protected int _bulleAtk = 1;
     //移動速度
     [SerializeField]
-    protected float bulletSpeed = 3f;
+    protected float _bulletSpeed = 3f;
 
-    private Vector3 dir = new Vector3(0, 0, 0);
-
-    protected virtual void OnTriggerEnter2D(Collider2D collision)
-    {
-        //弾が当たった相手がIDamagableを持っている場合は、ダメージを与える
-        if (collision.TryGetComponent<IDamagable>(out var d))
-        {
-            d.TakeDamage(bulleAtk);
-        }
-    }
-
-    //弾の移動メソッド
-    protected virtual void Move()
-    {
-        var p = transform.position;
-        p += bulletSpeed * Time.deltaTime * dir;
-        transform.position = p;
-    }
+    private Vector3 _direction = new Vector3(0, 0, 0);
 
     private void Update()
     {
         Move();
     }
 
-    public void SetSpeed(float speed)
+    protected virtual void OnTriggerEnter2D(Collider2D collision)
     {
-        bulletSpeed = speed;
+        //弾が当たった相手がIDamagableを持っている場合は、ダメージを与える
+        if (collision.TryGetComponent<IDamagable>(out var d))
+        {
+            d.TakeDamage(_bulleAtk);
+        }
     }
 
-    public void SetDirection()
+    public void Init(Vector2 direction, float speed)
     {
-        dir = transform.rotation * new Vector3(1, 0, 0);
+        _bulletSpeed = speed;
+        _direction = direction;
     }
 
-    protected void ResetDirection()
+    //弾の移動メソッド
+    protected virtual void Move()
     {
-        dir = new Vector3(0, 0, 0);
+        var p = transform.position;
+        p += _bulletSpeed * Time.deltaTime * _direction;
+        transform.position = p;
     }
+
+    protected void ResetDirection() => _direction = new Vector3(0, 0, 0);
 }

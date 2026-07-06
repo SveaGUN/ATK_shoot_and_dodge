@@ -7,10 +7,10 @@ public class BossBullet : BaseBullet
         //弾が当たった相手がIDamagableを持っている場合は、ダメージを与える
         if (collision.CompareTag("PlayerCollider"))
         {
-            collision.GetComponentInParent<IDamagable>()?.TakeDamage(bulleAtk);
+            collision.GetComponentInParent<IDamagable>()?.TakeDamage(_bulleAtk);
         }
         
-        BBulletPool.Instance.ReleaseBullet(this);
         ResetDirection();
+        BBulletPool.Instance.ReleaseBullet(this);
     }
 }
