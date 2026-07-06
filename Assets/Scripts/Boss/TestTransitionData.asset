@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95a77cd15ea29e74b80cd628664b7221, type: 3}
+  m_Name: TestTransitionData
+  m_EditorClassIdentifier: 
+  transitions:
+  - nextState: 4
+    stateTime: 10
+  - nextState: 1
+    stateTime: 2
+  - nextState: 5
+    stateTime: 10
+  - nextState: 1
+    stateTime: 2
+  - nextState: 6
+    stateTime: 10
+  - nextState: 1
+    stateTime: 2
+  - nextState: 7
+    stateTime: 10
+  - nextState: 1
+    stateTime: 2
+  - nextState: 8
+    stateTime: 10
+  - nextState: 1
+    stateTime: 2
+  - nextState: 3
+    stateTime: 20
+  - nextState: 1
+    stateTime: 3
