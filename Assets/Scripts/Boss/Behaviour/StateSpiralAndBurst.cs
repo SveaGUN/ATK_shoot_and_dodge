@@ -40,6 +40,7 @@ public class StateSpiralAndBurst : IBossState
         if (_spiralTimer >= _spiralInterval)
         {
             _fireSystem.FireBurstCircle(2, 1, 3f, _spiralRot);
+            _fireSystem.FireBurstCircle(2, 1, 3f, 180 - _spiralRot);
             _spiralRot += 13f;
             if (_spiralRot >= 360) { _spiralRot -= 360; }
             _spiralTimer = 0;
@@ -49,8 +50,6 @@ public class StateSpiralAndBurst : IBossState
         if (_burstTimer >= _burstInterval)
         {
             _fireSystem.FireSpreadToTarget(5, 3f);  // ‚â‚âL‚¢
-            //_fireSystem.FireSpreadToTarget(5, 2f);  // ’†’ö“x
-            //_fireSystem.FireSpreadToTarget(5, 1f);  // ‹·‚¢
             _burstTimer = 0;
         }
 
