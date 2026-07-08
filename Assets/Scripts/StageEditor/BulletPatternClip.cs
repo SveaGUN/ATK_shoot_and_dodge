@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.Playables;
+using UnityEngine.Timeline;
 
 namespace AkaneTools.BulletHell.Timeline
 {
@@ -14,7 +15,7 @@ namespace AkaneTools.BulletHell.Timeline
         private int DirectionCount = 1;
         [SerializeField]
         private float AngleStep = 5;
-        [SerializeField]
+        [SerializeField, Range(-359f, 359f)]
         private float AngleOffset = 0;
         [SerializeField, Range(0.01f, 20f)]
         private float Speed = 0;

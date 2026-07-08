@@ -52,7 +52,7 @@ public class SceneRoot : MonoBehaviour
         GameStateNotifier gameStateNotifier = new GameStateNotifier(gameOver: GameOver, stageClear: GameClear);
 
         player.Init(gameStateNotifier);
-        boss.Init(gameStateNotifier);
+        //boss.Init(gameStateNotifier);
     }
 
     private void Start()
@@ -71,7 +71,7 @@ public class SceneRoot : MonoBehaviour
 
             case GameState.Play:
                 player.PlayerUpdate();
-                boss.BossUpdate();
+                //boss.BossUpdate();
                 break;
 
             case GameState.StageClear:

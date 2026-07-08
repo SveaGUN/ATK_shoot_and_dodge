@@ -15,8 +15,10 @@ namespace AkaneTools.BulletHell.Timeline
         public bool OnPlayFire = true;
 
         private bool _hasSpawned = false;
+        private bool _isAntiCrock = false;
 
         private double _nextFireTime = 0;
+        private float _currentAngleOffset = 0;
 
         public override void OnBehaviourPlay(Playable playable, FrameData info)
         {
@@ -28,6 +30,7 @@ namespace AkaneTools.BulletHell.Timeline
 
             _nextFireTime = FireInterval;
 
+            if(AngleOffset < 0f) { _isAntiCrock = true; }
             if (OnPlayFire) { Fire(); }
 
             Debug.Log("Play");
@@ -56,13 +59,19 @@ namespace AkaneTools.BulletHell.Timeline
 
         private void Fire()
         {
+            _currentAngleOffset += AngleOffset;
+            if(_currentAngleOffset >= 360f || _currentAngleOffset < -360f)
+            {
+                _currentAngleOffset -= _isAntiCrock ? 360f : -360f;
+            }
+
             BulletSpawner.Instance.Spawn(PatternName,
                 new BulletPatternParam
                 {
                     BulletCount = this.BulletCount,
                     DirectionCount = this.DirectionCount,
                     AngleStep = this.AngleStep,
-                    AngleOffset = this.AngleOffset,
+                    AngleOffset = _currentAngleOffset,
                     Speed = this.Speed,
                 });
         }
