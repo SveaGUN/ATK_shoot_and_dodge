@@ -15,6 +15,7 @@ MonoBehaviour:
   Target:
     exposedName: e6b6bf1d75fe455469bde33b6434078a
     defaultValue: {fileID: 0}
+  TypeBullet: 1
   Pattern: 1
   BulletCount: 5
   DirectionCount: 3
@@ -58,6 +59,7 @@ MonoBehaviour:
   Target:
     exposedName: b2841b69f052e0d4ba656e9068a38c7d
     defaultValue: {fileID: 0}
+  TypeBullet: 0
   Pattern: 1
   BulletCount: 5
   DirectionCount: 3

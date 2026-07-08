@@ -6,13 +6,17 @@ namespace AkaneTools.BulletHell
     {
         public static BulletSpawner Instance { get; private set; } = null;
 
-        private EnemyBulletPool _pool = null;
+        private EnemyBulletPool _enemyPool = null;
+        private BossBulletPool _bossPool = null;
+
+        public BulletType TypeBullet { get; set; } = BulletType.Enemy;
 
         private void Start()
         {
             if (Instance == null) { Instance = this; }
 
-            _pool = EnemyBulletPool.Instance;
+            _enemyPool = EnemyBulletPool.Instance;
+            _bossPool = BossBulletPool.Instance;
         }
 
         /// <summary>
@@ -88,10 +92,24 @@ namespace AkaneTools.BulletHell
 
         private void Fire(Transform firepoint, Vector2 direction, float speed)
         {
-            var bullet = _pool.GetBullet();
-            bullet.transform.position = firepoint.position;
-            //bullet.SetDirection(direction); // ← Bullet側もVector2受け取りに変更する想定
-            bullet.Init(direction, speed);
+            switch (TypeBullet)
+            {
+                case BulletType.Enemy:
+                    var e = _enemyPool.GetBullet();
+                    e.transform.position = firepoint.position;
+                    e.Init(direction, speed);
+                    break;
+                case BulletType.Boss:
+                    var b = _bossPool.GetBullet();
+                    b.transform.position = firepoint.position;
+                    b.Init(direction, speed);
+                    break;
+                default:
+                    var d = _enemyPool.GetBullet();
+                    d.transform.position = firepoint.position;
+                    d.Init(direction, speed);
+                    break;
+            }
         }
         //===========ヘルパー===========
 

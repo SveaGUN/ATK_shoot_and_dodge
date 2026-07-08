@@ -7,6 +7,7 @@ namespace AkaneTools.BulletHell.Timeline
     {
         public Transform Target = null;
 
+        public BulletType Type = BulletType.Enemy;
         public BulletFirePattern Pattern = BulletFirePattern.Simple;
         public int BulletCount = 0;
         public int DirectionCount = 0;
@@ -15,7 +16,6 @@ namespace AkaneTools.BulletHell.Timeline
         public float Speed = 0;
         public float FireInterval = 0;
 
-        private bool _hasSpawned = false;
         private bool _isAntiCrock = false;
         private bool _isFollow = false;//ターゲットに向けて発射するかどうか
 
@@ -69,6 +69,8 @@ namespace AkaneTools.BulletHell.Timeline
                 AngleOffset = _currentAngleOffset,
                 Speed = this.Speed,
             };
+
+            BulletSpawner.Instance.TypeBullet = Type;
 
             if (_isFollow)
             {

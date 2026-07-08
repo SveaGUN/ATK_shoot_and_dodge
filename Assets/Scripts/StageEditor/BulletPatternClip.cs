@@ -9,6 +9,8 @@ namespace AkaneTools.BulletHell.Timeline
         [SerializeField]
         private ExposedReference<Transform> Target;//アタッチしなくてもよい
         [SerializeField]
+        private BulletType TypeBullet = BulletType.Enemy;
+        [SerializeField]
         private BulletFirePattern Pattern = BulletFirePattern.Simple;
         [SerializeField, Range(1, 30)]
         private int BulletCount = 1;
@@ -30,6 +32,7 @@ namespace AkaneTools.BulletHell.Timeline
             var playable = ScriptPlayable<BulletPatternBehaviour>.Create(graph);
             var behaviour = playable.GetBehaviour();
             behaviour.Target = Target.Resolve(graph.GetResolver());
+            behaviour.Type = TypeBullet;
             behaviour.Pattern = Pattern;
             behaviour.BulletCount = BulletCount;
             behaviour.DirectionCount = DirectionCount;
