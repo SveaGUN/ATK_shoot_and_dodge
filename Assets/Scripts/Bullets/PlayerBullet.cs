@@ -11,7 +11,7 @@ public class PlayerBullet : BaseBullet
         }
 
         ResetDirection();
-        PBulletPool.Instance.ReleaseBullet(this);
+        PlayerBulletPool.Instance.ReleaseBullet(this);
     }
 
     public override void Init(Vector2 direction, float speed = 3)

@@ -1,20 +1,20 @@
 using UnityEngine;
 using UnityEngine.Pool;
 
-public class PBulletPool : MonoBehaviour, IBulletPool<PlayerBullet>
+public class EnemyBulletPool : MonoBehaviour, IBulletPool<EnemyBullet>
 {
-    public static PBulletPool Instance { get; private set; } = null;
+    public static EnemyBulletPool Instance { get; private set; } = null;
 
     [SerializeField, Tooltip("オブジェクトプールで管理するオブジェクト")]
-    private PlayerBullet _bullet = null;
+    private EnemyBullet _bullet = null;
 
-    private ObjectPool<PlayerBullet> _pool = null;
+    private ObjectPool<EnemyBullet> _pool = null;
 
     private void Awake()//オブジェクトプールの初期化
     {
         if(Instance == null) { Instance = this; }
 
-        _pool = new ObjectPool<PlayerBullet>(
+        _pool = new ObjectPool<EnemyBullet>(
             CreatePooledObject,
             OnGet,
             OnRelease,
@@ -25,21 +25,21 @@ public class PBulletPool : MonoBehaviour, IBulletPool<PlayerBullet>
             );
     }
 
-    public PlayerBullet GetBullet() => _pool.Get();
+    public EnemyBullet GetBullet() => _pool.Get();
 
-    public void ReleaseBullet(PlayerBullet obj) => _pool.Release(obj);
+    public void ReleaseBullet(EnemyBullet obj) => _pool.Release(obj);
 
     //プールに空きがない時にオブジェクトを生成する
-    private PlayerBullet CreatePooledObject() => Instantiate(_bullet, transform);
+    private EnemyBullet CreatePooledObject() => Instantiate(_bullet, transform);
 
     //プールに空きがあるときの処理
-    private void OnGet(PlayerBullet obj) => obj.gameObject.SetActive(true);
+    private void OnGet(EnemyBullet obj) => obj.gameObject.SetActive(true);
 
     //プールに返却するときの処理
-    private void OnRelease(PlayerBullet obj) => obj.gameObject.SetActive(false);
+    private void OnRelease(EnemyBullet obj) => obj.gameObject.SetActive(false);
 
     //Maxのサイズより大きくなった時に破棄する処理
-    private void OnDestory(PlayerBullet obj)
+    private void OnDestory(EnemyBullet obj)
     {
 #if UNITY_EDITOR
         if (Application.isPlaying) { Destroy(obj); }

@@ -54,7 +54,7 @@ public class Boss : MonoBehaviour, IDamagable
         currentHp = maxHp;
         _hpBar.Init();
 
-        _fireSystem = new FireSystem<BossBullet>(transform, GameObject.FindWithTag("Player").GetComponent<Transform>(), transform, BBulletPool.Instance);
+        _fireSystem = new FireSystem<BossBullet>(transform, GameObject.FindWithTag("Player").GetComponent<Transform>(), transform, BossBulletPool.Instance);
 
         _stateNotifier = notifier;
 

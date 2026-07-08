@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class BossBullet : BaseBullet
+public class EnemyBullet : BaseBullet
 {
     protected override void OnTriggerEnter2D(Collider2D collision)
     {
@@ -9,8 +9,8 @@ public class BossBullet : BaseBullet
         {
             collision.GetComponentInParent<IDamagable>()?.TakeDamage(_bulleAtk);
         }
-        
+
         ResetDirection();
-        BossBulletPool.Instance.ReleaseBullet(this);
+        EnemyBulletPool.Instance.ReleaseBullet(this);
     }
 }

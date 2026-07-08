@@ -1,9 +1,9 @@
 using UnityEngine;
 using UnityEngine.Pool;
 
-public class BBulletPool : MonoBehaviour, IBulletPool<BossBullet>
+public class BossBulletPool : MonoBehaviour, IBulletPool<BossBullet>
 {
-    public static BBulletPool Instance { get; private set; } = null;
+    public static BossBulletPool Instance { get; private set; } = null;
 
     [SerializeField, Tooltip("オブジェクトプールで管理するオブジェクト")]
     private BossBullet _bullet = null;

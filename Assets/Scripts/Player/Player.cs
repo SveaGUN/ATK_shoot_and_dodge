@@ -149,7 +149,7 @@ public class Player : MonoBehaviour, IDamagable
         _ft += Time.deltaTime;
         if (_ft >= _fireRate)
         {
-            var bullet = PBulletPool.Instance.GetBullet();
+            var bullet = PlayerBulletPool.Instance.GetBullet();
             bullet.transform.position = _firePoint.position;
             //マウスポインタの方向ベクトル
             var tm = (p - bullet.transform.position).normalized;

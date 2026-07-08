@@ -11,20 +11,6 @@ public class BaseBullet : MonoBehaviour
 
     protected Vector3 _direction = new Vector3(0, 0, 0);
 
-    private void Update()
-    {
-        Move();
-    }
-
-    protected virtual void OnTriggerEnter2D(Collider2D collision)
-    {
-        //弾が当たった相手がIDamagableを持っている場合は、ダメージを与える
-        if (collision.TryGetComponent<IDamagable>(out var d))
-        {
-            d.TakeDamage(_bulleAtk);
-        }
-    }
-
     public virtual void Init(Vector2 direction, float speed)
     {
         _bulletSpeed = speed;
@@ -32,6 +18,11 @@ public class BaseBullet : MonoBehaviour
     }
 
     public virtual void Init(Vector2 direction) => _direction = direction;
+
+    private void Update()
+    {
+        Move();
+    }
 
     //弾の移動メソッド
     protected virtual void Move()
@@ -42,4 +33,13 @@ public class BaseBullet : MonoBehaviour
     }
 
     protected void ResetDirection() => _direction = new Vector3(0, 0, 0);
+
+    protected virtual void OnTriggerEnter2D(Collider2D collision)
+    {
+        //弾が当たった相手がIDamagableを持っている場合は、ダメージを与える
+        if (collision.TryGetComponent<IDamagable>(out var d))
+        {
+            d.TakeDamage(_bulleAtk);
+        }
+    }
 }
