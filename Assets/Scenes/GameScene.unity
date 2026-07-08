@@ -2129,6 +2129,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1424174862}
+  - component: {fileID: 1424174863}
   m_Layer: 0
   m_Name: Pools
   m_TagString: Untagged
@@ -2154,6 +2155,18 @@ Transform:
   - {fileID: 1169971748}
   m_Father: {fileID: 2043735929}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1424174863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1424174861}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3caa25b7d85e0246ac3a390a6aeae26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AkaneTools.BulletHell.BulletSpawner
 --- !u!1 &1791879686
 GameObject:
   m_ObjectHideFlags: 0
@@ -2271,6 +2284,7 @@ GameObject:
   - component: {fileID: 1894430105}
   - component: {fileID: 1894430102}
   - component: {fileID: 1894430101}
+  - component: {fileID: 1894430106}
   m_Layer: 9
   m_Name: Boss
   m_TagString: Enemy
@@ -2431,10 +2445,29 @@ MonoBehaviour:
   maxHp: 1000
   dead: {fileID: 2677866020804602428, guid: ff63028bbac986042989244794298a32, type: 3}
   _hpBar: {fileID: 800366714}
-  _transitionData: {fileID: 11400000, guid: d776eb90dad126245a6718c6950b0432, type: 2}
-  _debugTransitionData: {fileID: 11400000, guid: dea44192fb68b7344ad51b9141606e6d,
-    type: 2}
-  _isDebug: 1
+--- !u!320 &1894430106
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1894430100}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: ff5a7953235444f44bc787d558208bf8, type: 2}
+  m_InitialState: 0
+  m_WrapMode: 1
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings:
+  - key: {fileID: 8896816941866619255, guid: ff5a7953235444f44bc787d558208bf8, type: 2}
+    value: {fileID: 1894430104}
+  m_ExposedReferences:
+    m_References:
+    - 21f34940f39c531408534a88a0613795: {fileID: 959761867}
+    - 282ff9ae4b5442540acb9453f8f6a580: {fileID: 959761867}
+    - b2841b69f052e0d4ba656e9068a38c7d: {fileID: 959761867}
+    - e6b6bf1d75fe455469bde33b6434078a: {fileID: 959761867}
 --- !u!1 &1978366755
 GameObject:
   m_ObjectHideFlags: 0

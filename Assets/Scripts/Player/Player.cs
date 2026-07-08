@@ -140,13 +140,6 @@ public class Player : MonoBehaviour, IDamagable
         var p = targetCamera.ScreenToWorldPoint(_lookInput);
         p.z = 0f;
 
-        ////マウス、ゲームパッドに応じた処理
-        //bool isMouseDevice = (_currentControlScheme == "Mouse");
-        //if (isMouseDevice)
-        //{   //マウスポインタの座標をワールド座標に変換
-        //    ;
-        //}
-
         _ft += Time.deltaTime;
         if (_ft >= _fireRate)
         {

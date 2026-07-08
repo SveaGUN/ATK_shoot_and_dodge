@@ -27,31 +27,24 @@ namespace AkaneTools.BulletHell.Timeline
 #if UNITY_EDITOR
             if (!Application.isPlaying) { return; }
 #endif
-            if (_hasSpawned) { return; }
-            _hasSpawned = true;
+            //’l‚Ì‰Šú‰»
+            _nextFireTime = 0;
+            _currentAngleOffset = 0;
 
             //ƒtƒ‰ƒOİ’è
             _isAntiCrock = AngleOffset < 0f;
             _isFollow = Target != null;
-
-            Debug.Log("Play");
-        }
-
-        public override void OnBehaviourPause(Playable playable, FrameData info)
-        {
-
         }
 
         public override void ProcessFrame(Playable playable, FrameData info, object playerData)
         {
+#if UNITY_EDITOR
+            if (!Application.isPlaying) { return; }
+#endif
             var currentTime = playable.GetTime();
 
             if(currentTime >= _nextFireTime)
             {
-#if UNITY_EDITOR
-                if (!Application.isPlaying) { return; }
-#endif
-
                 _nextFireTime += FireInterval;
 
                 _currentAngleOffset += AngleOffset;

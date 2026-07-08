@@ -139,5 +139,7 @@ public class SceneRoot : MonoBehaviour
         yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
 
         currentState = GameState.Play;
+
+        boss.BossStart();
     }
 }
