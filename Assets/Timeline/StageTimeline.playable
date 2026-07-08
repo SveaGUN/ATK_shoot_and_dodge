@@ -100,7 +100,7 @@ MonoBehaviour:
     m_EaseInDuration: 0
     m_EaseOutDuration: 0
     m_BlendInDuration: -1
-    m_BlendOutDuration: -1
+    m_BlendOutDuration: 2.0666666666666664
     m_MixInCurve:
       serializedVersion: 2
       m_Curve:
@@ -122,6 +122,39 @@ MonoBehaviour:
         weightedMode: 0
         inWeight: 0
         outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 0
+    m_PreExtrapolationMode: 0
+    m_PostExtrapolationTime: 0
+    m_PreExtrapolationTime: 0
+    m_DisplayName: BulletPatternClip
+  - m_Version: 1
+    m_Start: 5.05
+    m_ClipIn: 0
+    m_Asset: {fileID: -7204447947518844142}
+    m_Duration: 5
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: -7410460544389713817}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: 2.0666666666666664
+    m_BlendOutDuration: -1
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve: []
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
@@ -158,9 +191,35 @@ MonoBehaviour:
     m_PreExtrapolationMode: 0
     m_PostExtrapolationTime: 0
     m_PreExtrapolationTime: 0
-    m_DisplayName: BulletPatternClip
+    m_DisplayName: GameObject
   m_Markers:
     m_Objects: []
+--- !u!114 &-7204447947518844142
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6a6138c78b920546bcd5df899eab24d, type: 3}
+  m_Name: BulletPatternClip
+  m_EditorClassIdentifier: Assembly-CSharp::AkaneTools.BulletHell.Timeline.BulletPatternClip
+  FirePoint:
+    exposedName: 0956eba1955275c4baa377eea7832e48
+    defaultValue: {fileID: 0}
+  Target:
+    exposedName: 4a1c9c6b6506ddd4a8acc962fb8c6e60
+    defaultValue: {fileID: 0}
+  Pattern: 2
+  BulletCount: 5
+  DirectionCount: 1
+  AngleStep: 5
+  AngleOffset: 0
+  Speed: 5
+  FireInterval: 1
+  OnPlayFire: 1
 --- !u!114 &-1160256024104018458
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -173,12 +232,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6a6138c78b920546bcd5df899eab24d, type: 3}
   m_Name: BulletPatternClip
   m_EditorClassIdentifier: Assembly-CSharp::AkaneTools.BulletHell.Timeline.BulletPatternClip
-  PatternName: a
+  FirePoint:
+    exposedName: dc8e8cb71b475044cafec7239f74730e
+    defaultValue: {fileID: 0}
+  Target:
+    exposedName: 0cd3321d396df934b8b2e20088d9518c
+    defaultValue: {fileID: 0}
+  Pattern: 0
   BulletCount: 1
   DirectionCount: 2
   AngleStep: 0
   AngleOffset: -5
-  Speed: 7
+  Speed: 10
   FireInterval: 0.05
   OnPlayFire: 1
 --- !u!114 &11400000
@@ -214,7 +279,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6a6138c78b920546bcd5df899eab24d, type: 3}
   m_Name: BulletPatternClip
   m_EditorClassIdentifier: Assembly-CSharp::AkaneTools.BulletHell.Timeline.BulletPatternClip
-  PatternName: a
+  FirePoint:
+    exposedName: 8aa185ba5a8d6a247b18768992831c3a
+    defaultValue: {fileID: 0}
+  Target:
+    exposedName: 
+    defaultValue: {fileID: 0}
+  Pattern: 0
   BulletCount: 10
   DirectionCount: 3
   AngleStep: 5

@@ -655,6 +655,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2043735929}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &521068164
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 521068165}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &521068165
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 521068164}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 6.09, y: 2.26, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &537538399
 GameObject:
   m_ObjectHideFlags: 0
@@ -2186,9 +2217,21 @@ PlayableDirector:
   m_WrapMode: 2
   m_DirectorUpdateMode: 1
   m_InitialTime: 0
-  m_SceneBindings: []
+  m_SceneBindings:
+  - key: {fileID: -7410460544389713817, guid: 1f103c4880fb09e45a6a1f360becaab6, type: 2}
+    value: {fileID: 521068165}
   m_ExposedReferences:
     m_References:
+    - 88fba95d2e9285f4e859e851dd0b0384: {fileID: 1580142849}
+    - 0cd3321d396df934b8b2e20088d9518c: {fileID: 959761867}
+    - 0b1689c8fe75c6245bc97fffe7af1379: {fileID: 1580142851}
+    - b8efec795e9571f48aa98d204c96f13c: {fileID: 521068165}
+    - 89a5859c2fb63374aa84cec4c457eb76: {fileID: 1791879687}
+    - dc8e8cb71b475044cafec7239f74730e: {fileID: 521068165}
+    - 8aa185ba5a8d6a247b18768992831c3a: {fileID: 521068165}
+    - ca95ec47cc583334d8395106cd7f3a1a: {fileID: 521068165}
+    - 0956eba1955275c4baa377eea7832e48: {fileID: 521068165}
+    - 4a1c9c6b6506ddd4a8acc962fb8c6e60: {fileID: 959761867}
     - be465f2044fac354aac0045bb671099c: {fileID: 0}
 --- !u!4 &1580142851
 Transform:
@@ -2917,4 +2960,5 @@ SceneRoots:
   m_Roots:
   - {fileID: 2043735929}
   - {fileID: 191444191}
+  - {fileID: 521068165}
   - {fileID: 1580142851}

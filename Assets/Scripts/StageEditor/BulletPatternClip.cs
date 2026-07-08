@@ -1,6 +1,5 @@
 using UnityEngine;
 using UnityEngine.Playables;
-using UnityEngine.Timeline;
 
 namespace AkaneTools.BulletHell.Timeline
 {
@@ -8,7 +7,11 @@ namespace AkaneTools.BulletHell.Timeline
     public class BulletPatternClip : PlayableAsset
     {
         [SerializeField]
-        private string PatternName = string.Empty;
+        private ExposedReference<Transform> FirePoint;
+        [SerializeField]
+        private ExposedReference<Transform> Target;//アタッチしなくてもよい
+        [SerializeField]
+        private BulletFirePattern Pattern = BulletFirePattern.Simple;
         [SerializeField, Range(1, 30)]
         private int BulletCount = 1;
         [SerializeField, Range(1, 36)]
@@ -30,7 +33,9 @@ namespace AkaneTools.BulletHell.Timeline
         {
             var playable = ScriptPlayable<BulletPatternBehaviour>.Create(graph);
             var behaviour = playable.GetBehaviour();
-            behaviour.PatternName = PatternName;
+            behaviour.FirePoint = FirePoint.Resolve(graph.GetResolver());
+            behaviour.Target = Target.Resolve(graph.GetResolver());
+            behaviour.Pattern = Pattern;
             behaviour.BulletCount = BulletCount;
             behaviour.DirectionCount = DirectionCount;
             behaviour.AngleStep = AngleStep;
@@ -38,7 +43,7 @@ namespace AkaneTools.BulletHell.Timeline
             behaviour.Speed = Speed;
             behaviour.FireInterval = FireInterval;
             behaviour.OnPlayFire = OnPlayFire;
-
+            
             return playable;
         }
     }
