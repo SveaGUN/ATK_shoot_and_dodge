@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: DebugData
   m_EditorClassIdentifier: 
   transitions:
-  - nextState: 5
+  - nextState: 0
     stateTime: 15

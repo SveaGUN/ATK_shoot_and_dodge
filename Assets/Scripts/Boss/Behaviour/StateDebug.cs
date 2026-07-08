@@ -49,10 +49,12 @@ public class StateDebug : IBossState
 
         if (_t2 >= _fireInterval2)
         {
-            //_fireSystem.FireBurstCircle(2, 6, 5, _offset2);
-            _fireSystem.FireBurstCircle(5, 6);
-            _t2 = 0f;
             _offset2 += 5f;
+            _t2 = 0f;
+
+            //_fireSystem.FireBurstCircle(2, 6, 5, _offset2);
+            //_fireSystem.FireBurstCircle(5, 6);
+            _fireSystem.FireBurstCircle(5, 1, _offset2);
         }
 
         //ステートの時間が経過したらステートを終了し、次のステートに遷移
