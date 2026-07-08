@@ -5,7 +5,6 @@ namespace AkaneTools.BulletHell.Timeline
 {
     public class BulletPatternBehaviour : PlayableBehaviour
     {
-        public Transform FirePoint = null;
         public Transform Target = null;
 
         public BulletFirePattern Pattern = BulletFirePattern.Simple;
@@ -15,7 +14,6 @@ namespace AkaneTools.BulletHell.Timeline
         public float AngleOffset = 0;
         public float Speed = 0;
         public float FireInterval = 0;
-        public bool OnPlayFire = true;
 
         private bool _hasSpawned = false;
         private bool _isAntiCrock = false;
@@ -32,13 +30,9 @@ namespace AkaneTools.BulletHell.Timeline
             if (_hasSpawned) { return; }
             _hasSpawned = true;
 
-            _nextFireTime = FireInterval;
-
             //ÉtÉâÉOê›íË
             _isAntiCrock = AngleOffset < 0f;
             _isFollow = Target != null;
-
-            if (OnPlayFire) { Fire(); }
 
             Debug.Log("Play");
         }
@@ -68,11 +62,11 @@ namespace AkaneTools.BulletHell.Timeline
                     _currentAngleOffset -= _isAntiCrock ? 360f : -360f;
                 }
 
-                Fire();
+                Fire(playerData as Transform);
             }
         }
 
-        private void Fire()
+        private void Fire(Transform firePoint)
         {
             var param = new BulletPatternParam
             {
@@ -85,11 +79,11 @@ namespace AkaneTools.BulletHell.Timeline
 
             if (_isFollow)
             {
-                BulletSpawner.Instance.SpawnFollow(Pattern, FirePoint, Target, param);
+                BulletSpawner.Instance.SpawnFollow(Pattern, firePoint, Target, param);
             }
             else
             {
-                BulletSpawner.Instance.SpawnNormal(Pattern, FirePoint, param);
+                BulletSpawner.Instance.SpawnNormal(Pattern, firePoint, param);
             }
 
         }

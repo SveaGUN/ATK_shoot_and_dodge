@@ -7,8 +7,6 @@ namespace AkaneTools.BulletHell.Timeline
     public class BulletPatternClip : PlayableAsset
     {
         [SerializeField]
-        private ExposedReference<Transform> FirePoint;
-        [SerializeField]
         private ExposedReference<Transform> Target;//アタッチしなくてもよい
         [SerializeField]
         private BulletFirePattern Pattern = BulletFirePattern.Simple;
@@ -21,11 +19,9 @@ namespace AkaneTools.BulletHell.Timeline
         [SerializeField, Range(-359f, 359f)]
         private float AngleOffset = 0;
         [SerializeField, Range(0.01f, 20f)]
-        private float Speed = 0;
+        private float Speed = 5f;
         [SerializeField, Range(0.01f, 10f)]
         private float FireInterval = 1;
-        [SerializeField]
-        private bool OnPlayFire = true;
 
         //todo 発射回数とn秒間発射するの使い分けができるようにする
 
@@ -33,7 +29,6 @@ namespace AkaneTools.BulletHell.Timeline
         {
             var playable = ScriptPlayable<BulletPatternBehaviour>.Create(graph);
             var behaviour = playable.GetBehaviour();
-            behaviour.FirePoint = FirePoint.Resolve(graph.GetResolver());
             behaviour.Target = Target.Resolve(graph.GetResolver());
             behaviour.Pattern = Pattern;
             behaviour.BulletCount = BulletCount;
@@ -42,7 +37,6 @@ namespace AkaneTools.BulletHell.Timeline
             behaviour.AngleOffset = AngleOffset;
             behaviour.Speed = Speed;
             behaviour.FireInterval = FireInterval;
-            behaviour.OnPlayFire = OnPlayFire;
             
             return playable;
         }

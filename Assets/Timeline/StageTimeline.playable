@@ -1,6 +1,106 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-7410460544389713817
+--- !u!114 &-8242320270759836787
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6a6138c78b920546bcd5df899eab24d, type: 3}
+  m_Name: BulletPatternClip
+  m_EditorClassIdentifier: Assembly-CSharp::AkaneTools.BulletHell.Timeline.BulletPatternClip
+  Target:
+    exposedName: 9bb0000070ca857478eb9c621890817b
+    defaultValue: {fileID: 0}
+  Pattern: 1
+  BulletCount: 5
+  DirectionCount: 7
+  AngleStep: 5
+  AngleOffset: 15
+  Speed: 7
+  FireInterval: 0.5
+--- !u!114 &-5655513043411899414
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6a6138c78b920546bcd5df899eab24d, type: 3}
+  m_Name: BulletPatternClip(Clone)(Clone)
+  m_EditorClassIdentifier: Assembly-CSharp::AkaneTools.BulletHell.Timeline.BulletPatternClip
+  Target:
+    exposedName: 4a8de3b838b15684895e895fef0ec175
+    defaultValue: {fileID: 0}
+  Pattern: 1
+  BulletCount: 5
+  DirectionCount: 7
+  AngleStep: 5
+  AngleOffset: 15
+  Speed: 7
+  FireInterval: 0.5
+--- !u!114 &-4858279772004087055
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2346b1ee1024e8b4a9266b0cf9b0f36e, type: 3}
+  m_Name: Bullet Pattern Track (2)
+  m_EditorClassIdentifier: Assembly-CSharp::AkaneTools.BulletHell.Timeline.BulletPatternTrack
+  m_Version: 3
+  m_AnimClip: {fileID: 0}
+  m_Locked: 0
+  m_Muted: 0
+  m_CustomPlayableFullTypename: 
+  m_Curves: {fileID: 0}
+  m_Parent: {fileID: 11400000}
+  m_Children: []
+  m_Clips:
+  - m_Version: 1
+    m_Start: 4.45
+    m_ClipIn: 0
+    m_Asset: {fileID: -5655513043411899414}
+    m_Duration: 5
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: -4858279772004087055}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: -1
+    m_BlendOutDuration: -1
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 0
+    m_PreExtrapolationMode: 0
+    m_PostExtrapolationTime: 0
+    m_PreExtrapolationTime: 0
+    m_DisplayName: Player
+  m_Markers:
+    m_Objects: []
+--- !u!114 &-4094460037965845556
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -22,139 +122,37 @@ MonoBehaviour:
   m_Children: []
   m_Clips:
   - m_Version: 1
-    m_Start: 0.38333333333333336
+    m_Start: 0
     m_ClipIn: 0
-    m_Asset: {fileID: 7747329991212536205}
-    m_Duration: 2.55
-    m_TimeScale: 1
-    m_ParentTrack: {fileID: -7410460544389713817}
-    m_EaseInDuration: 0
-    m_EaseOutDuration: 0
-    m_BlendInDuration: -1
-    m_BlendOutDuration: -1
-    m_MixInCurve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 1
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    m_MixOutCurve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 1
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    m_BlendInCurveMode: 0
-    m_BlendOutCurveMode: 0
-    m_ExposedParameterNames: []
-    m_AnimationCurves: {fileID: 0}
-    m_Recordable: 0
-    m_PostExtrapolationMode: 0
-    m_PreExtrapolationMode: 0
-    m_PostExtrapolationTime: 0
-    m_PreExtrapolationTime: 0
-    m_DisplayName: BulletPatternClip
-  - m_Version: 1
-    m_Start: 3.5
-    m_ClipIn: 0
-    m_Asset: {fileID: -1160256024104018458}
-    m_Duration: 3.6166666666666663
-    m_TimeScale: 1
-    m_ParentTrack: {fileID: -7410460544389713817}
-    m_EaseInDuration: 0
-    m_EaseOutDuration: 0
-    m_BlendInDuration: -1
-    m_BlendOutDuration: 2.0666666666666664
-    m_MixInCurve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 1
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    m_MixOutCurve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    m_BlendInCurveMode: 0
-    m_BlendOutCurveMode: 0
-    m_ExposedParameterNames: []
-    m_AnimationCurves: {fileID: 0}
-    m_Recordable: 0
-    m_PostExtrapolationMode: 0
-    m_PreExtrapolationMode: 0
-    m_PostExtrapolationTime: 0
-    m_PreExtrapolationTime: 0
-    m_DisplayName: BulletPatternClip
-  - m_Version: 1
-    m_Start: 5.05
-    m_ClipIn: 0
-    m_Asset: {fileID: -7204447947518844142}
+    m_Asset: {fileID: -8242320270759836787}
     m_Duration: 5
     m_TimeScale: 1
-    m_ParentTrack: {fileID: -7410460544389713817}
+    m_ParentTrack: {fileID: -4094460037965845556}
     m_EaseInDuration: 0
     m_EaseOutDuration: 0
-    m_BlendInDuration: 2.0666666666666664
+    m_BlendInDuration: -1
     m_BlendOutDuration: -1
     m_MixInCurve:
       serializedVersion: 2
-      m_Curve: []
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
@@ -191,61 +189,9 @@ MonoBehaviour:
     m_PreExtrapolationMode: 0
     m_PostExtrapolationTime: 0
     m_PreExtrapolationTime: 0
-    m_DisplayName: GameObject
+    m_DisplayName: Player
   m_Markers:
     m_Objects: []
---- !u!114 &-7204447947518844142
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6a6138c78b920546bcd5df899eab24d, type: 3}
-  m_Name: BulletPatternClip
-  m_EditorClassIdentifier: Assembly-CSharp::AkaneTools.BulletHell.Timeline.BulletPatternClip
-  FirePoint:
-    exposedName: 0956eba1955275c4baa377eea7832e48
-    defaultValue: {fileID: 0}
-  Target:
-    exposedName: 4a1c9c6b6506ddd4a8acc962fb8c6e60
-    defaultValue: {fileID: 0}
-  Pattern: 2
-  BulletCount: 5
-  DirectionCount: 1
-  AngleStep: 5
-  AngleOffset: 0
-  Speed: 5
-  FireInterval: 1
-  OnPlayFire: 1
---- !u!114 &-1160256024104018458
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6a6138c78b920546bcd5df899eab24d, type: 3}
-  m_Name: BulletPatternClip
-  m_EditorClassIdentifier: Assembly-CSharp::AkaneTools.BulletHell.Timeline.BulletPatternClip
-  FirePoint:
-    exposedName: dc8e8cb71b475044cafec7239f74730e
-    defaultValue: {fileID: 0}
-  Target:
-    exposedName: 0cd3321d396df934b8b2e20088d9518c
-    defaultValue: {fileID: 0}
-  Pattern: 0
-  BulletCount: 1
-  DirectionCount: 2
-  AngleStep: 0
-  AngleOffset: -5
-  Speed: 10
-  FireInterval: 0.05
-  OnPlayFire: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -260,14 +206,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.Timeline::UnityEngine.Timeline.TimelineAsset
   m_Version: 0
   m_Tracks:
-  - {fileID: -7410460544389713817}
+  - {fileID: -4094460037965845556}
+  - {fileID: 4691840475067768363}
+  - {fileID: -4858279772004087055}
   m_FixedDuration: 0
   m_EditorSettings:
     m_Framerate: 60
     m_ScenePreview: 1
   m_DurationMode: 0
   m_MarkerTrack: {fileID: 0}
---- !u!114 &7747329991212536205
+--- !u!114 &4222357878653483377
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -277,19 +225,89 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c6a6138c78b920546bcd5df899eab24d, type: 3}
-  m_Name: BulletPatternClip
+  m_Name: BulletPatternClip(Clone)(Clone)
   m_EditorClassIdentifier: Assembly-CSharp::AkaneTools.BulletHell.Timeline.BulletPatternClip
-  FirePoint:
-    exposedName: 8aa185ba5a8d6a247b18768992831c3a
-    defaultValue: {fileID: 0}
   Target:
-    exposedName: 
+    exposedName: e59d262199f41254192d234b0e85c97a
     defaultValue: {fileID: 0}
-  Pattern: 0
-  BulletCount: 10
-  DirectionCount: 3
+  Pattern: 1
+  BulletCount: 5
+  DirectionCount: 7
   AngleStep: 5
-  AngleOffset: 10
-  Speed: 5
+  AngleOffset: 15
+  Speed: 7
   FireInterval: 0.5
-  OnPlayFire: 1
+--- !u!114 &4691840475067768363
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2346b1ee1024e8b4a9266b0cf9b0f36e, type: 3}
+  m_Name: Bullet Pattern Track (1)
+  m_EditorClassIdentifier: Assembly-CSharp::AkaneTools.BulletHell.Timeline.BulletPatternTrack
+  m_Version: 3
+  m_AnimClip: {fileID: 0}
+  m_Locked: 0
+  m_Muted: 0
+  m_CustomPlayableFullTypename: 
+  m_Curves: {fileID: 0}
+  m_Parent: {fileID: 11400000}
+  m_Children: []
+  m_Clips:
+  - m_Version: 1
+    m_Start: 2.3666666666666667
+    m_ClipIn: 0
+    m_Asset: {fileID: 4222357878653483377}
+    m_Duration: 5
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: 4691840475067768363}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: -1
+    m_BlendOutDuration: -1
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 0
+    m_PreExtrapolationMode: 0
+    m_PostExtrapolationTime: 0
+    m_PreExtrapolationTime: 0
+    m_DisplayName: Player
+  m_Markers:
+    m_Objects: []
