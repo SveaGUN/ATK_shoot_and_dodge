@@ -1242,8 +1242,6 @@ MonoBehaviour:
   _boundaryY: 0.05
   _playerSpeed: 7
   _maxHp: 10
-  _firePoint: {fileID: 537538400}
-  _fireRate: 0.07
 --- !u!50 &959761872
 Rigidbody2D:
   serializedVersion: 5
@@ -2442,9 +2440,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b0c2605f49013e4c8a82d5a9061a848, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHp: 1000
   dead: {fileID: 2677866020804602428, guid: ff63028bbac986042989244794298a32, type: 3}
-  _hpBar: {fileID: 800366714}
 --- !u!320 &1894430106
 PlayableDirector:
   m_ObjectHideFlags: 0
@@ -2457,7 +2453,7 @@ PlayableDirector:
   m_PlayableAsset: {fileID: 11400000, guid: ff5a7953235444f44bc787d558208bf8, type: 2}
   m_InitialState: 0
   m_WrapMode: 1
-  m_DirectorUpdateMode: 1
+  m_DirectorUpdateMode: 3
   m_InitialTime: 0
   m_SceneBindings:
   - key: {fileID: 8896816941866619255, guid: ff5a7953235444f44bc787d558208bf8, type: 2}

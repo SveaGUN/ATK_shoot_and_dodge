@@ -1,67 +1,41 @@
 using UnityEngine;
 using UnityEngine.Playables;
 
-public class Boss : MonoBehaviour, IDamagable
+public class Boss : MonoBehaviour, IUpdatable
 {
-    [Header("ステータス")]
-    [SerializeField]
-    private int maxHp = 1000;
-    private int currentHp = 0;
-
     //撃破時のパーティクル
     [SerializeField]
     private ParticleSystem dead = null;
 
-    [SerializeField]
-    private Bar _hpBar = null;
-
     //レンダラー
     private SpriteRenderer bossRend;
-
-    private GameStateNotifier _stateNotifier = null;
 
     private PlayableDirector _director = null;
 
     /// <summary>
     /// 初期化処理
     /// </summary>
-    public void Init(GameStateNotifier notifier)
+    public void Init()
     {
         bossRend = GetComponent<SpriteRenderer>();
         _director = GetComponent<PlayableDirector>();
-
-        currentHp = maxHp;
-        _hpBar.Init();
-
-        _stateNotifier = notifier;
     }
 
-    public void BossStart()
+    public void OnStart()
     {
         _director.Play();
     }
 
-    public void BossUpdate()
+    public void OnUpdate(float deltaTime)
     {
-
-    }
-
-    public void TakeDamage(int damage)
-    {
-        currentHp -= damage;
-
-        _hpBar.UpdateFillAmount(maxHp, currentHp);
-
-        if (currentHp <= 0)
-        {
-            _stateNotifier.NotifyStageClear();
-        }
+        _director.time += deltaTime;
+        _director.Evaluate();
     }
 
     /// <summary>
-    /// 撃破時の処理
+    /// ゲームクリア時の処理
     /// </summary>
-    public void OnBossDead()
+    public void OnGameClear()
     {
         _director.Stop();
         

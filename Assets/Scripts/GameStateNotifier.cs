@@ -1,7 +1,5 @@
 using System;
 
-//メモリリークを防ぐため、オブジェクトが破棄されるときはRemoveAllListenerを呼び出すこと!!!
-
 public class GameStateNotifier
 {
     //ゲームオーバー時に呼び出されるイベント

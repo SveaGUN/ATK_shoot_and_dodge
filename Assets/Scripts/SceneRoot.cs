@@ -16,11 +16,6 @@ public class SceneRoot : MonoBehaviour
     [SerializeField]
     private GameClearUI gameClearUI = null;
 
-    [Header("Audio")]
-    [Tooltip("戦闘中に流すBGMインデックスを指定する")]
-    [SerializeField]
-    private int battleBgmIndex = 4;
-
     Animator animator;
     static readonly int outroId = Animator.StringToHash("Outro");
 
@@ -49,10 +44,10 @@ public class SceneRoot : MonoBehaviour
         gameOverUI.OnTitleButtonClick.AddListener(Title);
         gameClearUI.OnTitleButtonClick.AddListener(Title);
 
-        GameStateNotifier gameStateNotifier = new GameStateNotifier(gameOver: GameOver, stageClear: GameClear);
+        GameStateNotifier gameStateNotifier = new(GameOver, GameClear);
 
         player.Init(gameStateNotifier);
-        boss.Init(gameStateNotifier);
+        boss.Init();
     }
 
     private void Start()
@@ -64,14 +59,16 @@ public class SceneRoot : MonoBehaviour
 
     private void Update()
     {
+        var deltaTime = Time.deltaTime;
+
         switch (currentState)
         {
             case GameState.Intro:
                 break;
 
             case GameState.Play:
-                player.PlayerUpdate();
-                boss.BossUpdate();
+                player.OnUpdate(deltaTime);
+                boss.OnUpdate(deltaTime);
                 break;
 
             case GameState.StageClear:
@@ -92,7 +89,7 @@ public class SceneRoot : MonoBehaviour
             currentState = GameState.StageClear;
 
             player.OnClear();
-            boss.OnBossDead();
+            boss.OnGameClear();
             gameClearUI.AnimationPlay();
         }
     }
@@ -103,7 +100,6 @@ public class SceneRoot : MonoBehaviour
         {
             currentState = GameState.GameOver;
 
-            player.OnPlayerDead();
             boss.OnGameOver();
             gameOverUI.AnimationPlay();
 
@@ -140,6 +136,6 @@ public class SceneRoot : MonoBehaviour
 
         currentState = GameState.Play;
 
-        boss.BossStart();
+        boss.OnStart();
     }
 }

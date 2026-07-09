@@ -1,7 +1,7 @@
 using AkaneTools;
 using UnityEngine;
 
-public class Player : MonoBehaviour, IDamagable
+public class Player : MonoBehaviour, IDamagable, IUpdatable
 {
     private Camera targetCamera;
 
@@ -22,7 +22,7 @@ public class Player : MonoBehaviour, IDamagable
     [SerializeField]
     private float _playerSpeed = 1f;
 
-    [SerializeField,Tooltip("最大HP")]
+    [SerializeField, Tooltip("最大HP")]
     private int _maxHp = 10;
     //現在のhp
     private int _currentHp = 0;
@@ -30,21 +30,11 @@ public class Player : MonoBehaviour, IDamagable
 
     public int HitCount { get => _hitCount; }
 
-    [Header("射撃")]
-    [SerializeField, Tooltip("弾の生成地点")]
-    private Transform _firePoint = null;
-    [SerializeField, Tooltip("発射間隔(s)")]
-    private float _fireRate = 1f;
-    private float _ft;
-
     //入力値を受け取る
     private Vector2 _moveInput = Vector2.zero;
-    private Vector2 _lookInput = Vector2.zero;
 
     private bool _isSleep = false;
     private bool _isDead = false;
-
-    private string _currentControlScheme = "";
 
     private GameStateNotifier _stateNotifier = null;
 
@@ -71,15 +61,13 @@ public class Player : MonoBehaviour, IDamagable
     /// <summary>
     /// PlayerのUpdate処理
     /// </summary>
-    public void PlayerUpdate()
+    public void OnUpdate(float deltatime)
     {
-        if (_isSleep) return;
+        if (_isSleep) { return; }
 
         Move();
 
         KeepInScreen();
-
-        Fire();
     }
 
     public void TakeDamage(int damage)
@@ -94,6 +82,8 @@ public class Player : MonoBehaviour, IDamagable
 
         if (_currentHp <= 0 && !_isDead)
         {
+            OnPlayerDead();
+
             //Notifierに死亡を通知して、ゲームオーバー処理の実行を依頼
             _stateNotifier.NotifyGameOver();
         }
@@ -102,7 +92,7 @@ public class Player : MonoBehaviour, IDamagable
     /// <summary>
     /// プレイヤー死亡時の処理
     /// </summary>
-    public void OnPlayerDead()
+    private void OnPlayerDead()
     {
         //死亡時のSEを再生
         AudioManager.Instance.PlaySE("PlayerDestory");
@@ -135,24 +125,6 @@ public class Player : MonoBehaviour, IDamagable
         _isSleep = true;
     }
 
-    private void Fire()
-    {
-        var p = targetCamera.ScreenToWorldPoint(_lookInput);
-        p.z = 0f;
-
-        _ft += Time.deltaTime;
-        if (_ft >= _fireRate)
-        {
-            var bullet = PlayerBulletPool.Instance.GetBullet();
-            bullet.transform.position = _firePoint.position;
-            //マウスポインタの方向ベクトル
-            var tm = (p - bullet.transform.position).normalized;
-
-            bullet.Init(new Vector2(tm.x, tm.y));
-
-            _ft = 0f;
-        }
-    }
     //プレイヤーの移動
     private void Move()
     {
@@ -179,18 +151,11 @@ public class Player : MonoBehaviour, IDamagable
     private void SetHandler()
     {
         _playerInputHandler.OnMove += MoveHandler;
-        _playerInputHandler.OnLook += LookHandler;
     }
 
     private void MoveHandler(Vector2 input)
     {
         _moveInput = input;
-    }
-
-    private void LookHandler(Vector2 input, string name)
-    {
-        _lookInput = input;
-        _currentControlScheme = name;
     }
     #endregion
 }
