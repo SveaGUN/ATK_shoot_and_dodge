@@ -1,9 +1,10 @@
 using UnityEngine;
 using UnityEngine.Playables;
+using UnityEngine.Timeline;
 
 namespace AkaneTools.BulletHell.Timeline
 {
-    public class BulletPatternBehaviour : PlayableBehaviour
+    public class BulletPatternBehaviour : PlayableBehaviour, ITimelineClipAsset
     {
         public Transform Target = null;
 
@@ -21,6 +22,8 @@ namespace AkaneTools.BulletHell.Timeline
 
         private double _nextFireTime = 0;
         private float _currentAngleOffset = 0;
+
+        public ClipCaps clipCaps => ClipCaps.Blending;
 
         public override void OnBehaviourPlay(Playable playable, FrameData info)
         {
