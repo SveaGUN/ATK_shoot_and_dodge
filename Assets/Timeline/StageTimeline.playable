@@ -15,13 +15,14 @@ MonoBehaviour:
   Target:
     exposedName: 9bb0000070ca857478eb9c621890817b
     defaultValue: {fileID: 0}
-  Pattern: 1
+  TypeBullet: 0
+  Pattern: 2
   BulletCount: 5
   DirectionCount: 7
   AngleStep: 5
-  AngleOffset: 15
+  AngleOffset: 0
   Speed: 7
-  FireInterval: 0.5
+  FireInterval: 1
 --- !u!114 &-5655513043411899414
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -37,13 +38,14 @@ MonoBehaviour:
   Target:
     exposedName: 4a8de3b838b15684895e895fef0ec175
     defaultValue: {fileID: 0}
+  TypeBullet: 0
   Pattern: 1
   BulletCount: 5
   DirectionCount: 7
   AngleStep: 5
-  AngleOffset: 15
+  AngleOffset: 0
   Speed: 7
-  FireInterval: 0.5
+  FireInterval: 1
 --- !u!114 &-4858279772004087055
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -246,13 +248,14 @@ MonoBehaviour:
   Target:
     exposedName: e59d262199f41254192d234b0e85c97a
     defaultValue: {fileID: 0}
+  TypeBullet: 0
   Pattern: 1
   BulletCount: 5
   DirectionCount: 7
-  AngleStep: 5
-  AngleOffset: 15
+  AngleStep: 8.43
+  AngleOffset: 0
   Speed: 7
-  FireInterval: 0.5
+  FireInterval: 1
 --- !u!114 &4691840475067768363
 MonoBehaviour:
   m_ObjectHideFlags: 1
