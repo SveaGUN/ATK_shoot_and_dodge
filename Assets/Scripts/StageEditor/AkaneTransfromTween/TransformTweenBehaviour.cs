@@ -9,15 +9,38 @@ public class TransformTweenBehaviour : PlayableBehaviour
 
     public AnimationCurve EasingCurve = AnimationCurve.Linear(0f, 0f, 1f, 1f);
 
-    public override void OnBehaviourPlay(Playable playable, FrameData info)
-    {
+    public Vector3 StartPosition = Vector3.zero;
 
+    public override void PrepareFrame(Playable playable, FrameData info)
+    {
+        if (StartLocation)
+        {
+            StartPosition = StartLocation.position;
+        }
     }
 
-    public override void ProcessFrame(Playable playable, FrameData info, object playerData)
+    public float EvaluateEasingCurve(float time)
     {
-        var transform = playerData as Transform;
+        if (!IsEasingCurveNormalised())
+        {
+            Debug.LogError("Easing Curveを正規化してください！ (0 ,0) ~ (1, 1)");
+            return 0f;
+        }
 
-        transform.position = Vector3.LerpUnclamped(StartLocation.position, EndLocation.position, (float)playable.GetTime());
+        return EasingCurve.Evaluate(time);
+    }
+
+    //EasingCurveが0~1に正規化されているか
+    private bool IsEasingCurveNormalised()
+    {
+        //起点が0に近いか
+        if (!Mathf.Approximately(EasingCurve[0].time, 0f)) { return false; }
+
+        if (!Mathf.Approximately(EasingCurve[0].value, 0f)) { return false; }
+
+        //終点が1に近いか
+        if (!Mathf.Approximately(EasingCurve[EasingCurve.length - 1].time, 1f)) { return false; }
+
+        return Mathf.Approximately(EasingCurve[EasingCurve.length - 1].value, 1f);
     }
 }
