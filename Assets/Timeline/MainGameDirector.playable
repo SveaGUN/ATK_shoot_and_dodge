@@ -1,0 +1,2585 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-9167745487135432998
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ade8ac019fd11d84ba7cb7670bd7aead, type: 3}
+  m_Name: Transform Tween Track (2)
+  m_EditorClassIdentifier: Assembly-CSharp::AkaneTools.Timeline.TransformTweenTrack
+  m_Version: 3
+  m_AnimClip: {fileID: 0}
+  m_Locked: 0
+  m_Muted: 0
+  m_CustomPlayableFullTypename: 
+  m_Curves: {fileID: 0}
+  m_Parent: {fileID: 7046829361720814963}
+  m_Children: []
+  m_Clips:
+  - m_Version: 1
+    m_Start: 26.499999999999996
+    m_ClipIn: 0
+    m_Asset: {fileID: 8055882341643685838}
+    m_Duration: 1
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: -9167745487135432998}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: -1
+    m_BlendOutDuration: -1
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 0
+    m_PreExtrapolationMode: 0
+    m_PostExtrapolationTime: 0
+    m_PreExtrapolationTime: 0
+    m_DisplayName: TransformTweenClip
+  - m_Version: 1
+    m_Start: 108.50000000000003
+    m_ClipIn: 0
+    m_Asset: {fileID: -2520869018891484710}
+    m_Duration: 30
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: -9167745487135432998}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: -1
+    m_BlendOutDuration: -1
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 0
+    m_PreExtrapolationMode: 0
+    m_PostExtrapolationTime: 0
+    m_PreExtrapolationTime: 0
+    m_DisplayName: TransformTweenClip
+  m_Markers:
+    m_Objects: []
+--- !u!114 &-8944738757795947298
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6a6138c78b920546bcd5df899eab24d, type: 3}
+  m_Name: BulletPatternClip(Clone)
+  m_EditorClassIdentifier: Assembly-CSharp::AkaneTools.BulletHell.Timeline.BulletPatternClip
+  Target:
+    exposedName: 93e7dc97f02f01748bc908be94a85803
+    defaultValue: {fileID: 0}
+  TypeBullet: 0
+  Pattern: 1
+  BulletCount: 4
+  DirectionCount: 6
+  AngleStep: 10
+  AngleOffset: 10
+  Speed: 5
+  FireInterval: 0.5
+--- !u!114 &-8916461800087769566
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6cbc213dafa66549919f979ba485c47, type: 3}
+  m_Name: TransformTweenClip
+  m_EditorClassIdentifier: Assembly-CSharp::TransformTweenClip
+  StartLocation:
+    exposedName: 
+    defaultValue: {fileID: 0}
+  EndLocation:
+    exposedName: 
+    defaultValue: {fileID: 0}
+  UseCoordinate: 1
+  StartCoord: {x: 13, y: 7, z: 0}
+  EndCoord: {x: 0, y: 7, z: 0}
+  EasingCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.023114255
+      value: 0.066974014
+      inSlope: 3.1444736
+      outSlope: 3.1444736
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.02556141
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &-7549222577457259548
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6cbc213dafa66549919f979ba485c47, type: 3}
+  m_Name: TransformTweenClip(Clone)(Clone)(Clone)(Clone)
+  m_EditorClassIdentifier: Assembly-CSharp::TransformTweenClip
+  StartLocation:
+    exposedName: f9d13128572077243a50f2541265f21c
+    defaultValue: {fileID: 0}
+  EndLocation:
+    exposedName: f04c0d709825a8e41812ae6ce677219a
+    defaultValue: {fileID: 0}
+  UseCoordinate: 1
+  StartCoord: {x: 0, y: -7, z: 0}
+  EndCoord: {x: 13, y: 0, z: 0}
+  EasingCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &-7276815776537274563
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15e0374501f39d54eb30235764636e0e, type: 3}
+  m_Name: Control Track
+  m_EditorClassIdentifier: Unity.Timeline::UnityEngine.Timeline.ControlTrack
+  m_Version: 3
+  m_AnimClip: {fileID: 0}
+  m_Locked: 0
+  m_Muted: 0
+  m_CustomPlayableFullTypename: 
+  m_Curves: {fileID: 0}
+  m_Parent: {fileID: 11400000}
+  m_Children: []
+  m_Clips:
+  - m_Version: 1
+    m_Start: 142.56666666666666
+    m_ClipIn: 0
+    m_Asset: {fileID: 3995327681544942262}
+    m_Duration: 2.5999999999999943
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: -7276815776537274563}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: 0
+    m_BlendOutDuration: 0
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 0
+    m_PreExtrapolationMode: 0
+    m_PostExtrapolationTime: 0
+    m_PreExtrapolationTime: 0
+    m_DisplayName: Particle
+  - m_Version: 1
+    m_Start: 0
+    m_ClipIn: 0
+    m_Asset: {fileID: -5522811119107029894}
+    m_Duration: 2.5999999999999943
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: -7276815776537274563}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: 0
+    m_BlendOutDuration: 0
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 0
+    m_PreExtrapolationMode: 0
+    m_PostExtrapolationTime: 0
+    m_PreExtrapolationTime: 0
+    m_DisplayName: Particle
+  m_Markers:
+    m_Objects: []
+--- !u!114 &-6910079738523121708
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6a6138c78b920546bcd5df899eab24d, type: 3}
+  m_Name: BulletPatternClip(Clone)(Clone)(Clone)(Clone)
+  m_EditorClassIdentifier: Assembly-CSharp::AkaneTools.BulletHell.Timeline.BulletPatternClip
+  Target:
+    exposedName: f8f6c165c60c1494fbbadcd348f5e83c
+    defaultValue: {fileID: 0}
+  TypeBullet: 0
+  Pattern: 1
+  BulletCount: 1
+  DirectionCount: 2
+  AngleStep: 0
+  AngleOffset: -13
+  Speed: 2.5
+  FireInterval: 0.25
+--- !u!114 &-5940059834344552832
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6a6138c78b920546bcd5df899eab24d, type: 3}
+  m_Name: BulletPatternClip
+  m_EditorClassIdentifier: Assembly-CSharp::AkaneTools.BulletHell.Timeline.BulletPatternClip
+  Target:
+    exposedName: 14d5658eab1ecbf44babbcf0f1864d28
+    defaultValue: {fileID: 0}
+  TypeBullet: 0
+  Pattern: 2
+  BulletCount: 5
+  DirectionCount: 1
+  AngleStep: 5
+  AngleOffset: 0
+  Speed: 5
+  FireInterval: 1
+--- !u!114 &-5924129995361515280
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6a6138c78b920546bcd5df899eab24d, type: 3}
+  m_Name: BulletPatternClip(Clone)
+  m_EditorClassIdentifier: Assembly-CSharp::AkaneTools.BulletHell.Timeline.BulletPatternClip
+  Target:
+    exposedName: d8c6fac7864aded469704b93ec0e4c2b
+    defaultValue: {fileID: 0}
+  TypeBullet: 0
+  Pattern: 2
+  BulletCount: 1
+  DirectionCount: 1
+  AngleStep: 0
+  AngleOffset: 0
+  Speed: 5
+  FireInterval: 1
+--- !u!114 &-5704287322671672064
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2346b1ee1024e8b4a9266b0cf9b0f36e, type: 3}
+  m_Name: Bullet Pattern Track (2)
+  m_EditorClassIdentifier: Assembly-CSharp::AkaneTools.BulletHell.Timeline.BulletPatternTrack
+  m_Version: 3
+  m_AnimClip: {fileID: 0}
+  m_Locked: 0
+  m_Muted: 0
+  m_CustomPlayableFullTypename: 
+  m_Curves: {fileID: 0}
+  m_Parent: {fileID: 7046829361720814963}
+  m_Children: []
+  m_Clips:
+  - m_Version: 1
+    m_Start: 14.000000000000023
+    m_ClipIn: 0
+    m_Asset: {fileID: 3879448695947414176}
+    m_Duration: 5
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: -5704287322671672064}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: -1
+    m_BlendOutDuration: -1
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 0
+    m_PreExtrapolationMode: 0
+    m_PostExtrapolationTime: 0
+    m_PreExtrapolationTime: 0
+    m_DisplayName: BulletPatternClip
+  - m_Version: 1
+    m_Start: 35.50000000000003
+    m_ClipIn: 0
+    m_Asset: {fileID: -816250850365261601}
+    m_Duration: 5
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: -5704287322671672064}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: -1
+    m_BlendOutDuration: -1
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 0
+    m_PreExtrapolationMode: 0
+    m_PostExtrapolationTime: 0
+    m_PreExtrapolationTime: 0
+    m_DisplayName: BulletPatternClip
+  - m_Version: 1
+    m_Start: 73.5
+    m_ClipIn: 0
+    m_Asset: {fileID: 4907259685838118733}
+    m_Duration: 30
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: -5704287322671672064}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: 0.00000000000008526512829121202
+    m_BlendOutDuration: -1
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 0
+    m_PreExtrapolationMode: 0
+    m_PostExtrapolationTime: 0
+    m_PreExtrapolationTime: 0
+    m_DisplayName: BulletPatternClip
+  - m_Version: 1
+    m_Start: 43.500000000000085
+    m_ClipIn: 0
+    m_Asset: {fileID: 3230709382395673692}
+    m_Duration: 30
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: -5704287322671672064}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: -1
+    m_BlendOutDuration: 0.00000000000008526512829121202
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 0
+    m_PreExtrapolationMode: 0
+    m_PostExtrapolationTime: 0
+    m_PreExtrapolationTime: 0
+    m_DisplayName: BulletPatternClip
+  - m_Version: 1
+    m_Start: 108.49999999999997
+    m_ClipIn: 0
+    m_Asset: {fileID: -4549433684339220854}
+    m_Duration: 30
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: -5704287322671672064}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: -1
+    m_BlendOutDuration: -1
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 0
+    m_PreExtrapolationMode: 0
+    m_PostExtrapolationTime: 0
+    m_PreExtrapolationTime: 0
+    m_DisplayName: BulletPatternClip
+  m_Markers:
+    m_Objects: []
+--- !u!114 &-5522811119107029894
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48853ae485fa386428341ac1ea122570, type: 3}
+  m_Name: ControlPlayableAsset(Clone)
+  m_EditorClassIdentifier: Unity.Timeline::UnityEngine.Timeline.ControlPlayableAsset
+  sourceGameObject:
+    exposedName: d92fe27efef2f2c48876ff11736c4dba
+    defaultValue: {fileID: 0}
+  prefabGameObject: {fileID: 0}
+  updateParticle: 1
+  particleRandomSeed: 3888
+  updateDirector: 1
+  updateITimeControl: 1
+  searchHierarchy: 0
+  active: 1
+  postPlayback: 2
+  directorOnClipEnd: 0
+--- !u!114 &-5273241187444224930
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6cbc213dafa66549919f979ba485c47, type: 3}
+  m_Name: TransformTweenClip(Clone)
+  m_EditorClassIdentifier: Assembly-CSharp::TransformTweenClip
+  StartLocation:
+    exposedName: f5be03bf967db074bb24293e21de05ae
+    defaultValue: {fileID: 0}
+  EndLocation:
+    exposedName: cebefed806aa071409726c13b6147614
+    defaultValue: {fileID: 0}
+  UseCoordinate: 1
+  StartCoord: {x: 13, y: -7, z: 0}
+  EndCoord: {x: 13, y: 0, z: 0}
+  EasingCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.023114255
+      value: 0.066974014
+      inSlope: 3.1444736
+      outSlope: 3.1444736
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.02556141
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &-5153716968306230368
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6a6138c78b920546bcd5df899eab24d, type: 3}
+  m_Name: BulletPatternClip(Clone)(Clone)(Clone)(Clone)
+  m_EditorClassIdentifier: Assembly-CSharp::AkaneTools.BulletHell.Timeline.BulletPatternClip
+  Target:
+    exposedName: 44fb46565c5ca6e4ca569525f6953396
+    defaultValue: {fileID: 0}
+  TypeBullet: 0
+  Pattern: 1
+  BulletCount: 2
+  DirectionCount: 10
+  AngleStep: 5
+  AngleOffset: 0
+  Speed: 3
+  FireInterval: 0.5
+--- !u!114 &-4748730550497302244
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ade8ac019fd11d84ba7cb7670bd7aead, type: 3}
+  m_Name: Transform Tween Track
+  m_EditorClassIdentifier: Assembly-CSharp::AkaneTools.Timeline.TransformTweenTrack
+  m_Version: 3
+  m_AnimClip: {fileID: 0}
+  m_Locked: 0
+  m_Muted: 0
+  m_CustomPlayableFullTypename: 
+  m_Curves: {fileID: 0}
+  m_Parent: {fileID: 7756165508427490488}
+  m_Children: []
+  m_Clips:
+  - m_Version: 1
+    m_Start: 24.999999999999996
+    m_ClipIn: 0
+    m_Asset: {fileID: -8916461800087769566}
+    m_Duration: 1
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: -4748730550497302244}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: -1
+    m_BlendOutDuration: -1
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 0
+    m_PreExtrapolationMode: 0
+    m_PostExtrapolationTime: 0
+    m_PreExtrapolationTime: 0
+    m_DisplayName: TransformTweenClip
+  - m_Version: 1
+    m_Start: 108.50000000000003
+    m_ClipIn: 0
+    m_Asset: {fileID: -2452632665190180139}
+    m_Duration: 30.000000000000014
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: -4748730550497302244}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: -1
+    m_BlendOutDuration: -1
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 0
+    m_PreExtrapolationMode: 0
+    m_PostExtrapolationTime: 0
+    m_PreExtrapolationTime: 0
+    m_DisplayName: TransformTweenClip
+  m_Markers:
+    m_Objects: []
+--- !u!114 &-4667402341322890690
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6a6138c78b920546bcd5df899eab24d, type: 3}
+  m_Name: BulletPatternClip(Clone)
+  m_EditorClassIdentifier: Assembly-CSharp::AkaneTools.BulletHell.Timeline.BulletPatternClip
+  Target:
+    exposedName: fc32879c81941694aabb2ecf621e2505
+    defaultValue: {fileID: 0}
+  TypeBullet: 0
+  Pattern: 2
+  BulletCount: 10
+  DirectionCount: 1
+  AngleStep: 5
+  AngleOffset: 0
+  Speed: 5
+  FireInterval: 1
+--- !u!114 &-4549433684339220854
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6a6138c78b920546bcd5df899eab24d, type: 3}
+  m_Name: BulletPatternClip(Clone)(Clone)(Clone)
+  m_EditorClassIdentifier: Assembly-CSharp::AkaneTools.BulletHell.Timeline.BulletPatternClip
+  Target:
+    exposedName: 1ddd726ee923ae64d831780fa196bf75
+    defaultValue: {fileID: 0}
+  TypeBullet: 0
+  Pattern: 1
+  BulletCount: 2
+  DirectionCount: 10
+  AngleStep: 5
+  AngleOffset: 0
+  Speed: 3
+  FireInterval: 0.5
+--- !u!114 &-4041562303894392499
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6a6138c78b920546bcd5df899eab24d, type: 3}
+  m_Name: BulletPatternClip(Clone)(Clone)
+  m_EditorClassIdentifier: Assembly-CSharp::AkaneTools.BulletHell.Timeline.BulletPatternClip
+  Target:
+    exposedName: 1bada0915c8b0154da6c30e97a26a317
+    defaultValue: {fileID: 0}
+  TypeBullet: 0
+  Pattern: 2
+  BulletCount: 1
+  DirectionCount: 1
+  AngleStep: 3
+  AngleOffset: 0
+  Speed: 5
+  FireInterval: 1
+--- !u!114 &-2520869018891484710
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6cbc213dafa66549919f979ba485c47, type: 3}
+  m_Name: TransformTweenClip(Clone)(Clone)(Clone)
+  m_EditorClassIdentifier: Assembly-CSharp::TransformTweenClip
+  StartLocation:
+    exposedName: e995beb23ba0b3d408a2567a6c2abbc2
+    defaultValue: {fileID: 0}
+  EndLocation:
+    exposedName: 5cbbf5f1ac7e8a34b8059f3d6b8eb2fa
+    defaultValue: {fileID: 0}
+  UseCoordinate: 1
+  StartCoord: {x: -13, y: 0, z: 0}
+  EndCoord: {x: 0, y: -7, z: 0}
+  EasingCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &-2452632665190180139
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6cbc213dafa66549919f979ba485c47, type: 3}
+  m_Name: TransformTweenClip(Clone)
+  m_EditorClassIdentifier: Assembly-CSharp::TransformTweenClip
+  StartLocation:
+    exposedName: 865c47b07e2d564439bacdeb637132f1
+    defaultValue: {fileID: 0}
+  EndLocation:
+    exposedName: ade54b0a8c003b44fb20d88f37f4a5b2
+    defaultValue: {fileID: 0}
+  UseCoordinate: 1
+  StartCoord: {x: 0, y: 7, z: 0}
+  EndCoord: {x: -13, y: 0, z: 0}
+  EasingCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &-1225758153163044913
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6a6138c78b920546bcd5df899eab24d, type: 3}
+  m_Name: BulletPatternClip(Clone)(Clone)(Clone)
+  m_EditorClassIdentifier: Assembly-CSharp::AkaneTools.BulletHell.Timeline.BulletPatternClip
+  Target:
+    exposedName: e1ae045589467e54d83efdda5daba697
+    defaultValue: {fileID: 0}
+  TypeBullet: 0
+  Pattern: 1
+  BulletCount: 1
+  DirectionCount: 2
+  AngleStep: 0
+  AngleOffset: 13
+  Speed: 2.5
+  FireInterval: 0.25
+--- !u!114 &-816250850365261601
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6a6138c78b920546bcd5df899eab24d, type: 3}
+  m_Name: BulletPatternClip(Clone)(Clone)
+  m_EditorClassIdentifier: Assembly-CSharp::AkaneTools.BulletHell.Timeline.BulletPatternClip
+  Target:
+    exposedName: af7201ab625b3af46b94c7d004b51b09
+    defaultValue: {fileID: 0}
+  TypeBullet: 0
+  Pattern: 1
+  BulletCount: 4
+  DirectionCount: 6
+  AngleStep: 10
+  AngleOffset: 20
+  Speed: 5
+  FireInterval: 0.5
+--- !u!114 &-804493586791092812
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ade8ac019fd11d84ba7cb7670bd7aead, type: 3}
+  m_Name: Transform Tween Track (3)
+  m_EditorClassIdentifier: Assembly-CSharp::AkaneTools.Timeline.TransformTweenTrack
+  m_Version: 3
+  m_AnimClip: {fileID: 0}
+  m_Locked: 0
+  m_Muted: 0
+  m_CustomPlayableFullTypename: 
+  m_Curves: {fileID: 0}
+  m_Parent: {fileID: 7046829361720814963}
+  m_Children: []
+  m_Clips:
+  - m_Version: 1
+    m_Start: 25.999999999999996
+    m_ClipIn: 0
+    m_Asset: {fileID: 8419278799387642392}
+    m_Duration: 1
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: -804493586791092812}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: -1
+    m_BlendOutDuration: -1
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 0
+    m_PreExtrapolationMode: 0
+    m_PostExtrapolationTime: 0
+    m_PreExtrapolationTime: 0
+    m_DisplayName: TransformTweenClip
+  - m_Version: 1
+    m_Start: 108.50000000000003
+    m_ClipIn: 0
+    m_Asset: {fileID: -7549222577457259548}
+    m_Duration: 30.000000000000014
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: -804493586791092812}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: -1
+    m_BlendOutDuration: -1
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 0
+    m_PreExtrapolationMode: 0
+    m_PostExtrapolationTime: 0
+    m_PreExtrapolationTime: 0
+    m_DisplayName: TransformTweenClip
+  m_Markers:
+    m_Objects: []
+--- !u!114 &-213614049054992002
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6a6138c78b920546bcd5df899eab24d, type: 3}
+  m_Name: BulletPatternClip(Clone)(Clone)
+  m_EditorClassIdentifier: Assembly-CSharp::AkaneTools.BulletHell.Timeline.BulletPatternClip
+  Target:
+    exposedName: d6e16aa2d3a021e419a1ed7fe1996c53
+    defaultValue: {fileID: 0}
+  TypeBullet: 0
+  Pattern: 1
+  BulletCount: 1
+  DirectionCount: 2
+  AngleStep: 0
+  AngleOffset: 10
+  Speed: 2.5
+  FireInterval: 0.25
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfda56da833e2384a9677cd3c976a436, type: 3}
+  m_Name: MainGameDirector
+  m_EditorClassIdentifier: Unity.Timeline::UnityEngine.Timeline.TimelineAsset
+  m_Version: 0
+  m_Tracks:
+  - {fileID: 7756165508427490488}
+  - {fileID: 7046829361720814963}
+  - {fileID: -7276815776537274563}
+  - {fileID: 3787351810953772606}
+  m_FixedDuration: 0
+  m_EditorSettings:
+    m_Framerate: 60
+    m_ScenePreview: 1
+  m_DurationMode: 0
+  m_MarkerTrack: {fileID: 0}
+--- !u!114 &456527935366723702
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6cbc213dafa66549919f979ba485c47, type: 3}
+  m_Name: TransformTweenClip(Clone)(Clone)
+  m_EditorClassIdentifier: Assembly-CSharp::TransformTweenClip
+  StartLocation:
+    exposedName: e69243669a5e55a4790336f49306a529
+    defaultValue: {fileID: 0}
+  EndLocation:
+    exposedName: 915323162e71c514bb51aef9ec70f65f
+    defaultValue: {fileID: 0}
+  UseCoordinate: 1
+  StartCoord: {x: 13, y: 0, z: 0}
+  EndCoord: {x: 0, y: 7, z: 0}
+  EasingCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &1548348786730171663
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2346b1ee1024e8b4a9266b0cf9b0f36e, type: 3}
+  m_Name: Bullet Pattern Track (1)
+  m_EditorClassIdentifier: Assembly-CSharp::AkaneTools.BulletHell.Timeline.BulletPatternTrack
+  m_Version: 3
+  m_AnimClip: {fileID: 0}
+  m_Locked: 0
+  m_Muted: 0
+  m_CustomPlayableFullTypename: 
+  m_Curves: {fileID: 0}
+  m_Parent: {fileID: 7756165508427490488}
+  m_Children: []
+  m_Clips:
+  - m_Version: 1
+    m_Start: 8.000000000000023
+    m_ClipIn: 0
+    m_Asset: {fileID: -4667402341322890690}
+    m_Duration: 5
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: 1548348786730171663}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: -1
+    m_BlendOutDuration: -1
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 0
+    m_PreExtrapolationMode: 0
+    m_PostExtrapolationTime: 0
+    m_PreExtrapolationTime: 0
+    m_DisplayName: BulletPatternClip
+  - m_Version: 1
+    m_Start: 35.50000000000003
+    m_ClipIn: 0
+    m_Asset: {fileID: -8944738757795947298}
+    m_Duration: 5
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: 1548348786730171663}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: -1
+    m_BlendOutDuration: -1
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 0
+    m_PreExtrapolationMode: 0
+    m_PostExtrapolationTime: 0
+    m_PreExtrapolationTime: 0
+    m_DisplayName: BulletPatternClip
+  - m_Version: 1
+    m_Start: 43.50000000000003
+    m_ClipIn: 0
+    m_Asset: {fileID: 2808436379890338851}
+    m_Duration: 30
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: 1548348786730171663}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: -1
+    m_BlendOutDuration: -1
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 0
+    m_PreExtrapolationMode: 0
+    m_PostExtrapolationTime: 0
+    m_PreExtrapolationTime: 0
+    m_DisplayName: BulletPatternClip
+  - m_Version: 1
+    m_Start: 73.50000000000003
+    m_ClipIn: 0
+    m_Asset: {fileID: -6910079738523121708}
+    m_Duration: 30
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: 1548348786730171663}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: -1
+    m_BlendOutDuration: -1
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 0
+    m_PreExtrapolationMode: 0
+    m_PostExtrapolationTime: 0
+    m_PreExtrapolationTime: 0
+    m_DisplayName: BulletPatternClip
+  - m_Version: 1
+    m_Start: 108.5
+    m_ClipIn: 0
+    m_Asset: {fileID: -5153716968306230368}
+    m_Duration: 30
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: 1548348786730171663}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: -1
+    m_BlendOutDuration: -1
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 0
+    m_PreExtrapolationMode: 0
+    m_PostExtrapolationTime: 0
+    m_PreExtrapolationTime: 0
+    m_DisplayName: BulletPatternClip
+  m_Markers:
+    m_Objects: []
+--- !u!114 &2509552893447960576
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2346b1ee1024e8b4a9266b0cf9b0f36e, type: 3}
+  m_Name: Bullet Pattern Track (3)
+  m_EditorClassIdentifier: Assembly-CSharp::AkaneTools.BulletHell.Timeline.BulletPatternTrack
+  m_Version: 3
+  m_AnimClip: {fileID: 0}
+  m_Locked: 0
+  m_Muted: 0
+  m_CustomPlayableFullTypename: 
+  m_Curves: {fileID: 0}
+  m_Parent: {fileID: 7046829361720814963}
+  m_Children: []
+  m_Clips:
+  - m_Version: 1
+    m_Start: 20.000000000000025
+    m_ClipIn: 0
+    m_Asset: {fileID: 8939279505635530013}
+    m_Duration: 5
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: 2509552893447960576}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: -1
+    m_BlendOutDuration: -1
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 0
+    m_PreExtrapolationMode: 0
+    m_PostExtrapolationTime: 0
+    m_PreExtrapolationTime: 0
+    m_DisplayName: BulletPatternClip
+  - m_Version: 1
+    m_Start: 28.5
+    m_ClipIn: 0
+    m_Asset: {fileID: 3981577626357412881}
+    m_Duration: 5
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: 2509552893447960576}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: -1
+    m_BlendOutDuration: -1
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 0
+    m_PreExtrapolationMode: 0
+    m_PostExtrapolationTime: 0
+    m_PreExtrapolationTime: 0
+    m_DisplayName: BulletPatternClip
+  - m_Version: 1
+    m_Start: 73.49999999999997
+    m_ClipIn: 0
+    m_Asset: {fileID: 7862006317176325947}
+    m_Duration: 30
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: 2509552893447960576}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: -1
+    m_BlendOutDuration: -1
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 0
+    m_PreExtrapolationMode: 0
+    m_PostExtrapolationTime: 0
+    m_PreExtrapolationTime: 0
+    m_DisplayName: BulletPatternClip
+  - m_Version: 1
+    m_Start: 43.49999999999998
+    m_ClipIn: 0
+    m_Asset: {fileID: -1225758153163044913}
+    m_Duration: 30
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: 2509552893447960576}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: -1
+    m_BlendOutDuration: -1
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 0
+    m_PreExtrapolationMode: 0
+    m_PostExtrapolationTime: 0
+    m_PreExtrapolationTime: 0
+    m_DisplayName: BulletPatternClip
+  - m_Version: 1
+    m_Start: 108.50000000000003
+    m_ClipIn: 0
+    m_Asset: {fileID: -4041562303894392499}
+    m_Duration: 30
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: 2509552893447960576}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: -1
+    m_BlendOutDuration: -1
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 0
+    m_PreExtrapolationMode: 0
+    m_PostExtrapolationTime: 0
+    m_PreExtrapolationTime: 0
+    m_DisplayName: BulletPatternClip
+  m_Markers:
+    m_Objects: []
+--- !u!114 &2808436379890338851
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6a6138c78b920546bcd5df899eab24d, type: 3}
+  m_Name: BulletPatternClip(Clone)(Clone)(Clone)
+  m_EditorClassIdentifier: Assembly-CSharp::AkaneTools.BulletHell.Timeline.BulletPatternClip
+  Target:
+    exposedName: dfff481282345704f815808df52038ce
+    defaultValue: {fileID: 0}
+  TypeBullet: 0
+  Pattern: 1
+  BulletCount: 1
+  DirectionCount: 2
+  AngleStep: 0
+  AngleOffset: 11
+  Speed: 2.5
+  FireInterval: 0.25
+--- !u!114 &2872914073659546621
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2346b1ee1024e8b4a9266b0cf9b0f36e, type: 3}
+  m_Name: Bullet Pattern Track
+  m_EditorClassIdentifier: Assembly-CSharp::AkaneTools.BulletHell.Timeline.BulletPatternTrack
+  m_Version: 3
+  m_AnimClip: {fileID: 0}
+  m_Locked: 0
+  m_Muted: 0
+  m_CustomPlayableFullTypename: 
+  m_Curves: {fileID: 0}
+  m_Parent: {fileID: 7756165508427490488}
+  m_Children: []
+  m_Clips:
+  - m_Version: 1
+    m_Start: 2
+    m_ClipIn: 0
+    m_Asset: {fileID: -5940059834344552832}
+    m_Duration: 5
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: 2872914073659546621}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: -1
+    m_BlendOutDuration: -1
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 0
+    m_PreExtrapolationMode: 0
+    m_PostExtrapolationTime: 0
+    m_PreExtrapolationTime: 0
+    m_DisplayName: BulletPatternClip
+  - m_Version: 1
+    m_Start: 28.49999999999999
+    m_ClipIn: 0
+    m_Asset: {fileID: 3573876123980692478}
+    m_Duration: 5
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: 2872914073659546621}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: -1
+    m_BlendOutDuration: -1
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 0
+    m_PreExtrapolationMode: 0
+    m_PostExtrapolationTime: 0
+    m_PreExtrapolationTime: 0
+    m_DisplayName: BulletPatternClip
+  - m_Version: 1
+    m_Start: 43.50000000000004
+    m_ClipIn: 0
+    m_Asset: {fileID: -213614049054992002}
+    m_Duration: 30
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: 2872914073659546621}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: -1
+    m_BlendOutDuration: -1
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 0
+    m_PreExtrapolationMode: 0
+    m_PostExtrapolationTime: 0
+    m_PreExtrapolationTime: 0
+    m_DisplayName: BulletPatternClip
+  - m_Version: 1
+    m_Start: 73.50000000000007
+    m_ClipIn: 0
+    m_Asset: {fileID: 9097620614081591998}
+    m_Duration: 30
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: 2872914073659546621}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: -1
+    m_BlendOutDuration: -1
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 0
+    m_PreExtrapolationMode: 0
+    m_PostExtrapolationTime: 0
+    m_PreExtrapolationTime: 0
+    m_DisplayName: BulletPatternClip
+  - m_Version: 1
+    m_Start: 108.5
+    m_ClipIn: 0
+    m_Asset: {fileID: -5924129995361515280}
+    m_Duration: 30
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: 2872914073659546621}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: -1
+    m_BlendOutDuration: -1
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 0
+    m_PreExtrapolationMode: 0
+    m_PostExtrapolationTime: 0
+    m_PreExtrapolationTime: 0
+    m_DisplayName: BulletPatternClip
+  m_Markers:
+    m_Objects: []
+--- !u!114 &3230709382395673692
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6a6138c78b920546bcd5df899eab24d, type: 3}
+  m_Name: BulletPatternClip(Clone)(Clone)(Clone)(Clone)
+  m_EditorClassIdentifier: Assembly-CSharp::AkaneTools.BulletHell.Timeline.BulletPatternClip
+  Target:
+    exposedName: 4484e693e4d755a4b9b719cb5f27e433
+    defaultValue: {fileID: 0}
+  TypeBullet: 0
+  Pattern: 1
+  BulletCount: 1
+  DirectionCount: 2
+  AngleStep: 0
+  AngleOffset: 12
+  Speed: 2.5
+  FireInterval: 0.25
+--- !u!114 &3573876123980692478
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6a6138c78b920546bcd5df899eab24d, type: 3}
+  m_Name: BulletPatternClip
+  m_EditorClassIdentifier: Assembly-CSharp::AkaneTools.BulletHell.Timeline.BulletPatternClip
+  Target:
+    exposedName: 
+    defaultValue: {fileID: 0}
+  TypeBullet: 0
+  Pattern: 1
+  BulletCount: 4
+  DirectionCount: 6
+  AngleStep: 10
+  AngleOffset: 10
+  Speed: 5
+  FireInterval: 0.5
+--- !u!114 &3787351810953772606
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15e0374501f39d54eb30235764636e0e, type: 3}
+  m_Name: Control Track (1)
+  m_EditorClassIdentifier: Unity.Timeline::UnityEngine.Timeline.ControlTrack
+  m_Version: 3
+  m_AnimClip: {fileID: 0}
+  m_Locked: 0
+  m_Muted: 0
+  m_CustomPlayableFullTypename: 
+  m_Curves: {fileID: 0}
+  m_Parent: {fileID: 11400000}
+  m_Children: []
+  m_Clips:
+  - m_Version: 1
+    m_Start: 0
+    m_ClipIn: 0
+    m_Asset: {fileID: 8752852120851190083}
+    m_Duration: 142.56666666666666
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: 3787351810953772606}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: 0
+    m_BlendOutDuration: 0
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 0
+    m_PreExtrapolationMode: 0
+    m_PostExtrapolationTime: 0
+    m_PreExtrapolationTime: 0
+    m_DisplayName: Stage
+  m_Markers:
+    m_Objects: []
+--- !u!114 &3879448695947414176
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6a6138c78b920546bcd5df899eab24d, type: 3}
+  m_Name: BulletPatternClip(Clone)(Clone)
+  m_EditorClassIdentifier: Assembly-CSharp::AkaneTools.BulletHell.Timeline.BulletPatternClip
+  Target:
+    exposedName: 0f6cda3bc590dbd409167644e8b65a8f
+    defaultValue: {fileID: 0}
+  TypeBullet: 0
+  Pattern: 2
+  BulletCount: 15
+  DirectionCount: 1
+  AngleStep: 5
+  AngleOffset: 0
+  Speed: 5
+  FireInterval: 1
+--- !u!114 &3981577626357412881
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6a6138c78b920546bcd5df899eab24d, type: 3}
+  m_Name: BulletPatternClip(Clone)
+  m_EditorClassIdentifier: Assembly-CSharp::AkaneTools.BulletHell.Timeline.BulletPatternClip
+  Target:
+    exposedName: 62342858024b7d948a53b15accbf775f
+    defaultValue: {fileID: 0}
+  TypeBullet: 0
+  Pattern: 1
+  BulletCount: 4
+  DirectionCount: 6
+  AngleStep: 10
+  AngleOffset: 20
+  Speed: 5
+  FireInterval: 0.5
+--- !u!114 &3995327681544942262
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48853ae485fa386428341ac1ea122570, type: 3}
+  m_Name: ControlPlayableAsset
+  m_EditorClassIdentifier: Unity.Timeline::UnityEngine.Timeline.ControlPlayableAsset
+  sourceGameObject:
+    exposedName: db4405dce3d18ab45924e825e8dbd3fe
+    defaultValue: {fileID: 0}
+  prefabGameObject: {fileID: 0}
+  updateParticle: 1
+  particleRandomSeed: 3888
+  updateDirector: 1
+  updateITimeControl: 1
+  searchHierarchy: 0
+  active: 1
+  postPlayback: 2
+  directorOnClipEnd: 0
+--- !u!114 &4344571020692661085
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ade8ac019fd11d84ba7cb7670bd7aead, type: 3}
+  m_Name: Transform Tween Track (1)
+  m_EditorClassIdentifier: Assembly-CSharp::AkaneTools.Timeline.TransformTweenTrack
+  m_Version: 3
+  m_AnimClip: {fileID: 0}
+  m_Locked: 0
+  m_Muted: 0
+  m_CustomPlayableFullTypename: 
+  m_Curves: {fileID: 0}
+  m_Parent: {fileID: 7756165508427490488}
+  m_Children: []
+  m_Clips:
+  - m_Version: 1
+    m_Start: 25.499999999999996
+    m_ClipIn: 0
+    m_Asset: {fileID: -5273241187444224930}
+    m_Duration: 1
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: 4344571020692661085}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: -1
+    m_BlendOutDuration: -1
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 0
+    m_PreExtrapolationMode: 0
+    m_PostExtrapolationTime: 0
+    m_PreExtrapolationTime: 0
+    m_DisplayName: TransformTweenClip
+  - m_Version: 1
+    m_Start: 108.50000000000003
+    m_ClipIn: 0
+    m_Asset: {fileID: 456527935366723702}
+    m_Duration: 30
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: 4344571020692661085}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: -1
+    m_BlendOutDuration: -1
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 0
+    m_PreExtrapolationMode: 0
+    m_PostExtrapolationTime: 0
+    m_PreExtrapolationTime: 0
+    m_DisplayName: TransformTweenClip
+  m_Markers:
+    m_Objects: []
+--- !u!114 &4907259685838118733
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6a6138c78b920546bcd5df899eab24d, type: 3}
+  m_Name: BulletPatternClip(Clone)(Clone)(Clone)
+  m_EditorClassIdentifier: Assembly-CSharp::AkaneTools.BulletHell.Timeline.BulletPatternClip
+  Target:
+    exposedName: e35579379f773f649a258f27a08e31a1
+    defaultValue: {fileID: 0}
+  TypeBullet: 0
+  Pattern: 1
+  BulletCount: 1
+  DirectionCount: 2
+  AngleStep: 0
+  AngleOffset: -10
+  Speed: 2.5
+  FireInterval: 0.25
+--- !u!114 &7046829361720814963
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0fc6f5187a81dc47999eefade6f0935, type: 3}
+  m_Name: Enemy_L
+  m_EditorClassIdentifier: Unity.Timeline::UnityEngine.Timeline.GroupTrack
+  m_Version: 3
+  m_AnimClip: {fileID: 0}
+  m_Locked: 0
+  m_Muted: 0
+  m_CustomPlayableFullTypename: 
+  m_Curves: {fileID: 0}
+  m_Parent: {fileID: 11400000}
+  m_Children:
+  - {fileID: -5704287322671672064}
+  - {fileID: -9167745487135432998}
+  - {fileID: 2509552893447960576}
+  - {fileID: -804493586791092812}
+  m_Clips: []
+  m_Markers:
+    m_Objects: []
+--- !u!114 &7756165508427490488
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0fc6f5187a81dc47999eefade6f0935, type: 3}
+  m_Name: Enemey_R
+  m_EditorClassIdentifier: Unity.Timeline::UnityEngine.Timeline.GroupTrack
+  m_Version: 3
+  m_AnimClip: {fileID: 0}
+  m_Locked: 0
+  m_Muted: 0
+  m_CustomPlayableFullTypename: 
+  m_Curves: {fileID: 0}
+  m_Parent: {fileID: 11400000}
+  m_Children:
+  - {fileID: 2872914073659546621}
+  - {fileID: -4748730550497302244}
+  - {fileID: 1548348786730171663}
+  - {fileID: 4344571020692661085}
+  m_Clips: []
+  m_Markers:
+    m_Objects: []
+--- !u!114 &7862006317176325947
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6a6138c78b920546bcd5df899eab24d, type: 3}
+  m_Name: BulletPatternClip(Clone)(Clone)(Clone)(Clone)
+  m_EditorClassIdentifier: Assembly-CSharp::AkaneTools.BulletHell.Timeline.BulletPatternClip
+  Target:
+    exposedName: d3228784bc3826b4cb690ee377f523e0
+    defaultValue: {fileID: 0}
+  TypeBullet: 0
+  Pattern: 1
+  BulletCount: 1
+  DirectionCount: 2
+  AngleStep: 0
+  AngleOffset: -11
+  Speed: 2.5
+  FireInterval: 0.25
+--- !u!114 &8055882341643685838
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6cbc213dafa66549919f979ba485c47, type: 3}
+  m_Name: TransformTweenClip(Clone)(Clone)
+  m_EditorClassIdentifier: Assembly-CSharp::TransformTweenClip
+  StartLocation:
+    exposedName: ecdb1ad9927032e46a47cc418a337010
+    defaultValue: {fileID: 0}
+  EndLocation:
+    exposedName: 77b65e9838e4a8943b8d2f7a54824045
+    defaultValue: {fileID: 0}
+  UseCoordinate: 1
+  StartCoord: {x: -13, y: 7, z: 0}
+  EndCoord: {x: -13, y: 0, z: 0}
+  EasingCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.023114255
+      value: 0.066974014
+      inSlope: 3.1444736
+      outSlope: 3.1444736
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.02556141
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &8419278799387642392
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6cbc213dafa66549919f979ba485c47, type: 3}
+  m_Name: TransformTweenClip(Clone)(Clone)(Clone)
+  m_EditorClassIdentifier: Assembly-CSharp::TransformTweenClip
+  StartLocation:
+    exposedName: 39e485f33ae160143850d8f30a7f45fe
+    defaultValue: {fileID: 0}
+  EndLocation:
+    exposedName: 9e7303c7d2f672344890e1f9e539dabb
+    defaultValue: {fileID: 0}
+  UseCoordinate: 1
+  StartCoord: {x: -13, y: -7, z: 0}
+  EndCoord: {x: 0, y: -7, z: 0}
+  EasingCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.023114255
+      value: 0.066974014
+      inSlope: 3.1444736
+      outSlope: 3.1444736
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.02556141
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &8752852120851190083
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48853ae485fa386428341ac1ea122570, type: 3}
+  m_Name: ControlPlayableAsset
+  m_EditorClassIdentifier: Unity.Timeline::UnityEngine.Timeline.ControlPlayableAsset
+  sourceGameObject:
+    exposedName: 6163535b40c2d8c419252f7b1d056b28
+    defaultValue: {fileID: 0}
+  prefabGameObject: {fileID: 0}
+  updateParticle: 1
+  particleRandomSeed: 548
+  updateDirector: 1
+  updateITimeControl: 1
+  searchHierarchy: 0
+  active: 1
+  postPlayback: 2
+  directorOnClipEnd: 0
+--- !u!114 &8939279505635530013
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6a6138c78b920546bcd5df899eab24d, type: 3}
+  m_Name: BulletPatternClip(Clone)(Clone)(Clone)
+  m_EditorClassIdentifier: Assembly-CSharp::AkaneTools.BulletHell.Timeline.BulletPatternClip
+  Target:
+    exposedName: 0113bd607d965e64abaeb27cb4ab2eab
+    defaultValue: {fileID: 0}
+  TypeBullet: 0
+  Pattern: 2
+  BulletCount: 20
+  DirectionCount: 1
+  AngleStep: 5
+  AngleOffset: 0
+  Speed: 5
+  FireInterval: 1
+--- !u!114 &9097620614081591998
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6a6138c78b920546bcd5df899eab24d, type: 3}
+  m_Name: BulletPatternClip(Clone)(Clone)(Clone)(Clone)(Clone)
+  m_EditorClassIdentifier: Assembly-CSharp::AkaneTools.BulletHell.Timeline.BulletPatternClip
+  Target:
+    exposedName: 4416bef2f617cb74b9508a8d7003b55c
+    defaultValue: {fileID: 0}
+  TypeBullet: 0
+  Pattern: 1
+  BulletCount: 1
+  DirectionCount: 2
+  AngleStep: 0
+  AngleOffset: -12
+  Speed: 2.5
+  FireInterval: 0.25
