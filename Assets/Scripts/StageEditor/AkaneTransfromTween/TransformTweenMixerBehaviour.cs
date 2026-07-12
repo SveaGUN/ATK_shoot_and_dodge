@@ -25,21 +25,36 @@ public class TransformTweenMixerBehaviour : PlayableBehaviour
             ScriptPlayable<TransformTweenBehaviour> playableInput = (ScriptPlayable<TransformTweenBehaviour>)playable.GetInput(i);
             TransformTweenBehaviour behaviour = playableInput.GetBehaviour();
 
-            if (behaviour.EndLocation == null) { continue; }
-
-            float inputWeight = playable.GetInputWeight(i);
-
-            if (!_firstFrameMoved && !behaviour.StartLocation)
+            if (behaviour.UseCoordinate)
             {
-                behaviour.StartPosition = initPosition;
+                float inputWeight = playable.GetInputWeight(i);
+
+                float normalisedTime = (float)(playableInput.GetTime() / playableInput.GetDuration());
+                float progress = behaviour.EvaluateEasingCurve(normalisedTime);
+
+                positionTotalWeight += inputWeight;
+
+                blendedPosition += Vector3.Lerp(behaviour.StartCoord, behaviour.EndCoord, progress) * inputWeight;
             }
+            else
+            {
+                if (behaviour.EndLocation == null) { continue; }
 
-            float normalisedTime = (float)(playableInput.GetTime() / playableInput.GetDuration());
-            float progress = behaviour.EvaluateEasingCurve(normalisedTime);
+                float inputWeight = playable.GetInputWeight(i);
 
-            positionTotalWeight += inputWeight;
+                if (!_firstFrameMoved && !behaviour.StartLocation)
+                {
+                    behaviour.StartPosition = initPosition;
+                }
 
-            blendedPosition += Vector3.Lerp(behaviour.StartPosition, behaviour.EndLocation.position, progress) * inputWeight;
+                float normalisedTime = (float)(playableInput.GetTime() / playableInput.GetDuration());
+                float progress = behaviour.EvaluateEasingCurve(normalisedTime);
+
+                positionTotalWeight += inputWeight;
+
+                blendedPosition += Vector3.Lerp(behaviour.StartPosition, behaviour.EndLocation.position, progress) * inputWeight;
+
+            }
         }
 
         //ƒuƒŒƒ“ƒh‚³‚ê‚½ˆÊ’u‚É‚·‚é

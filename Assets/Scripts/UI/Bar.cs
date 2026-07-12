@@ -23,7 +23,7 @@ public class Bar : MonoBehaviour
     /// </summary>
     /// <param name="maxValue"></param>
     /// <param name="currentValue"></param>
-    public void UpdateFillAmount(int maxValue, float currentValue)
+    public void UpdateFillAmount(float maxValue, float currentValue)
     {
         _barUI.fillAmount = currentValue / maxValue;
     }

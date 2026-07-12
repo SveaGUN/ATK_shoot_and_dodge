@@ -11,8 +11,15 @@ public class TransformTweenBehaviour : PlayableBehaviour
 
     public Vector3 StartPosition = Vector3.zero;
 
+    public Vector3 StartCoord = Vector3.zero;
+    public Vector3 EndCoord = Vector3.zero;
+
+    public bool UseCoordinate = false;
+
     public override void PrepareFrame(Playable playable, FrameData info)
     {
+        if (UseCoordinate) { return; }
+
         if (StartLocation)
         {
             StartPosition = StartLocation.position;

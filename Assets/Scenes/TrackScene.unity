@@ -621,7 +621,7 @@ GameObject:
   - component: {fileID: 521068165}
   - component: {fileID: 521068166}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: EnemyLU
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -636,7 +636,7 @@ Transform:
   m_GameObject: {fileID: 521068164}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.18, y: 0.76, z: 0}
+  m_LocalPosition: {x: -12.5, y: 7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1260,7 +1260,7 @@ Transform:
   m_GameObject: {fileID: 959761866}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -7, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2222,7 +2222,7 @@ GameObject:
   - component: {fileID: 1454230571}
   - component: {fileID: 1454230572}
   m_Layer: 0
-  m_Name: GameObject (3)
+  m_Name: EnemyRD
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2237,7 +2237,7 @@ Transform:
   m_GameObject: {fileID: 1454230570}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.39, y: 5.95, z: 0}
+  m_LocalPosition: {x: 12.5, y: -7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2314,7 +2314,7 @@ GameObject:
   - component: {fileID: 1496445722}
   - component: {fileID: 1496445723}
   m_Layer: 0
-  m_Name: GameObject (2)
+  m_Name: EnemyRU
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2329,7 +2329,7 @@ Transform:
   m_GameObject: {fileID: 1496445721}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.39, y: -5.15, z: 0}
+  m_LocalPosition: {x: 12.5, y: 7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2434,8 +2434,8 @@ PlayableDirector:
     value: {fileID: 1833650661}
   - key: {fileID: 0}
     value: {fileID: 1496445722}
-  - key: {fileID: 935218201086424308, guid: 1f103c4880fb09e45a6a1f360becaab6, type: 2}
-    value: {fileID: 521068165}
+  - key: {fileID: -1949422988021231437, guid: 1f103c4880fb09e45a6a1f360becaab6, type: 2}
+    value: {fileID: 0}
   m_ExposedReferences:
     m_References:
     - 629acb46d20809041bc0775aaf21ad55: {fileID: 521068165}
@@ -2460,6 +2460,7 @@ PlayableDirector:
     - ca95ec47cc583334d8395106cd7f3a1a: {fileID: 521068165}
     - 0956eba1955275c4baa377eea7832e48: {fileID: 521068165}
     - 9bb0000070ca857478eb9c621890817b: {fileID: 959761867}
+    - a7fe155ff60230843a226aa67d49a073: {fileID: 0}
     - 4a1c9c6b6506ddd4a8acc962fb8c6e60: {fileID: 959761867}
     - 4f7517b02a9e3ab40bad77cb4f8c186c: {fileID: 959761867}
     - f96bd57792a55774983623aefebdf2ae: {fileID: 1496445722}
@@ -2609,7 +2610,7 @@ GameObject:
   - component: {fileID: 1833650661}
   - component: {fileID: 1833650662}
   m_Layer: 0
-  m_Name: GameObject (1)
+  m_Name: EnemyLD
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2624,7 +2625,7 @@ Transform:
   m_GameObject: {fileID: 1833650660}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.48, y: -4.76, z: 0}
+  m_LocalPosition: {x: -12.5, y: -7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2701,7 +2702,6 @@ GameObject:
   - component: {fileID: 1978366756}
   - component: {fileID: 1978366759}
   - component: {fileID: 1978366758}
-  - component: {fileID: 1978366757}
   m_Layer: 0
   m_Name: HpBarBase
   m_TagString: Untagged
@@ -2728,18 +2728,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1978366757
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1978366755}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1b3dfef4b9a3a8449ae80ebdfc6910b1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1978366758
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3026,6 +3014,8 @@ MonoBehaviour:
   boss: {fileID: 0}
   gameOverUI: {fileID: 2103564696}
   gameClearUI: {fileID: 918041988}
+  _stage: {fileID: 1580142850}
+  _timeBar: {fileID: 800366714}
 --- !u!224 &2103564693 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 9020487260250665070, guid: a0e845fb1c744cb47a72a1d0147f00a2,

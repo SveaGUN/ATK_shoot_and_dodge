@@ -1,12 +1,15 @@
 using AkaneTools;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Playables;
 using UnityEngine.SceneManagement;
 
 public class SceneRoot : MonoBehaviour
 {
     [SerializeField]
     private Player player = null;
+    [SerializeField]
+    private bool UseBoss = false;
     [SerializeField]
     private Boss boss = null;
 
@@ -18,6 +21,13 @@ public class SceneRoot : MonoBehaviour
 
     Animator animator;
     static readonly int outroId = Animator.StringToHash("Outro");
+
+    [SerializeField]
+    private PlayableDirector _stage = null;
+    [SerializeField]
+    private Bar _timeBar = null;
+
+    private float _stageTime = 0f;
 
     enum GameState
     {
@@ -33,6 +43,8 @@ public class SceneRoot : MonoBehaviour
 
     GameState currentState = GameState.Intro;
 
+    //=================== awake =====================
+
     private void Awake()
     {
         currentState = GameState.Intro;
@@ -44,19 +56,37 @@ public class SceneRoot : MonoBehaviour
         gameOverUI.OnTitleButtonClick.AddListener(Title);
         gameClearUI.OnTitleButtonClick.AddListener(Title);
 
-        GameStateNotifier gameStateNotifier = new(GameOver, GameClear);
+        player.Init(new GameStateNotifier(GameOver));
 
-        player.Init(gameStateNotifier);
-        boss.Init();
+        if (UseBoss) { boss.Init(); }
     }
 
+    //=================== start =====================
     private void Start()
     {
+        _stage.Stop();
+        _timeBar.Init();
+        _stageTime = (float)_stage.duration;
+
+        _stage.stopped += GameClear;
+
         StartCoroutine(OnStart());
         //指定した戦闘BGMを再生する
         AudioManager.Instance.PlayBGM("Battle");
     }
 
+    IEnumerator OnStart()
+    {
+        yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
+
+        currentState = GameState.Play;
+
+        _stage.Play();
+
+        if (UseBoss) { boss.OnStart(); }
+    }
+
+    //=================== update =====================
     private void Update()
     {
         var deltaTime = Time.deltaTime;
@@ -67,8 +97,12 @@ public class SceneRoot : MonoBehaviour
                 break;
 
             case GameState.Play:
+                _timeBar.UpdateFillAmount(_stageTime, _stageTime - (float)_stage.time);
+
                 player.OnUpdate(deltaTime);
-                boss.OnUpdate(deltaTime);
+
+                if (UseBoss) { boss.OnUpdate(deltaTime); }
+
                 break;
 
             case GameState.StageClear:
@@ -82,30 +116,34 @@ public class SceneRoot : MonoBehaviour
         }
     }
 
-    public void GameClear()
-    {
-        if (currentState == GameState.Play)
-        {
-            currentState = GameState.StageClear;
+    //=================== other =====================
 
-            player.OnClear();
-            boss.OnGameClear();
-            gameClearUI.AnimationPlay();
-        }
+    public void GameClear(PlayableDirector director)
+    {
+        if (currentState != GameState.Play) { return; }
+
+        currentState = GameState.StageClear;
+        gameClearUI.AnimationPlay();
+
+        _timeBar.UpdateFillAmount(1f, 0f);
+
+        player.OnClear();
+        if (UseBoss) { boss.OnGameClear(); }
+
     }
 
     public void GameOver()
     {
-        if (currentState == GameState.Play)
-        {
-            currentState = GameState.GameOver;
+        if (currentState != GameState.Play) { return; }
 
-            boss.OnGameOver();
-            gameOverUI.AnimationPlay();
+        currentState = GameState.GameOver;
 
-            //ゲームオーバー時のBGMを再生する
-            AudioManager.Instance.PlayBGM("GameOver");
-        }
+        if (UseBoss) { boss.OnGameOver(); }
+        gameOverUI.AnimationPlay();
+
+        //ゲームオーバー時のBGMを再生する
+        AudioManager.Instance.PlayBGM("GameOver");
+
     }
 
     private void Retry()
@@ -130,12 +168,8 @@ public class SceneRoot : MonoBehaviour
         SceneManager.LoadScene(name);
     }
 
-    IEnumerator OnStart()
+    private void OnDestroy()
     {
-        yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
-
-        currentState = GameState.Play;
-
-        boss.OnStart();
+        _stage.stopped -= GameClear;
     }
 }
