@@ -30,13 +30,13 @@ namespace AkaneTools.BulletHell
             switch (pattern)
             {
                 case BulletFirePattern.Simple:
-                    FireAtAngle(firePoint, param.AngleStep, param.AngleOffset, param.Speed);
+                    FireAtAngle(firePoint, param.BaseAngle, param.AngleOffset, param.Speed);
                     break;
                 case BulletFirePattern.Circle:
-                    FireCircle(firePoint, param.BulletCount, param.DirectionCount, param.AngleStep, param.AngleOffset, param.Speed);
+                    FireCircle(firePoint, param.BulletCount, param.DirectionCount, param.BaseAngle, param.AngleStep, param.AngleOffset, param.Speed);
                     break;
                 case BulletFirePattern.Spred:
-                    FireSpread(firePoint, param.BulletCount, param.AngleStep, param.AngleOffset, param.Speed);
+                    FireSpread(firePoint, param.BulletCount, param.BaseAngle, param.AngleStep, param.AngleOffset, param.Speed);
                     break;
                 default:
                     break;
@@ -141,18 +141,19 @@ namespace AkaneTools.BulletHell
         /// <param name="angleStep">’e‚ÌŠÔŠuŠp“x(bulletCount‚É‘Î‰)</param>
         /// <param name="angleOffset">‰½“x‚¸‚ç‚·‚©(directionCOunt‚É‘Î‰)</param>
         /// <param name="speed">’e‘¬(ƒfƒtƒHƒ‹ƒg‚Í5f)</param>
-        public void FireCircle(Transform firepoint, int bulletCount, int directionCount, float angleStep, float angleOffset, float speed)
+        public void FireCircle(Transform firepoint, int bulletCount, int directionCount, float baseAngle, float angleStep, float angleOffset, float speed)
         {
-            var baseAngle = 360 / directionCount;
+            var directionAngle = 360 / directionCount;
+            var halfOffset = (bulletCount >> 1) * angleStep;
 
             for (int i = 0; i < bulletCount; i++)
             {
                 //ˆê•ûŒü
-                var radialAngle = angleStep * i + angleOffset;
+                var radialAngle = angleStep * i- halfOffset;
 
                 for (int j = 0; j < directionCount; j++)
                 {
-                    var fireDegree = baseAngle * j + radialAngle;
+                    var fireDegree = baseAngle + directionAngle * j + radialAngle + angleOffset;
                     Fire(firepoint, AngleToDirection(fireDegree), speed);
                 }
             }
@@ -169,11 +170,12 @@ namespace AkaneTools.BulletHell
         public void FireCircleToTarget(Transform firepoint, Transform target, int bulletCount, int directionCount, float angleStep, float speed)
         {
             var baseAngle = 360 / directionCount;
+            var halfOffset = (bulletCount >> 1) * angleStep;
 
             for (int i = 0; i < bulletCount; i++)
             {
                 //ˆê•ûŒü
-                var radialAngle = angleStep * i + TargetDirToAngle(firepoint, target);
+                var radialAngle = angleStep * i + TargetDirToAngle(firepoint, target) - halfOffset;
 
                 for (int j = 0; j < directionCount; j++)
                 {
@@ -189,10 +191,10 @@ namespace AkaneTools.BulletHell
         /// <param name="bulletCount">ˆê•ûŒü‚Ì”­Ë’e”</param>
         /// <param name="angleStep">’e‚ÌŠÔŠuŠp“x</param>
         /// <param name="speed">’e‘¬(ƒfƒtƒHƒ‹ƒg‚Í5f)</param>
-        public void FireSpread(Transform firepoint, int bulletCount, float angleStep, float angleOffset, float speed)
+        public void FireSpread(Transform firepoint, int bulletCount, float baseAngle, float angleStep, float angleOffset, float speed)
         {
             var half = bulletCount >> 1;
-            var startAngle = angleOffset - angleStep * half;
+            var startAngle = baseAngle + angleOffset - angleStep * half;
 
             for (int i = 0; i < bulletCount; i++)
             {

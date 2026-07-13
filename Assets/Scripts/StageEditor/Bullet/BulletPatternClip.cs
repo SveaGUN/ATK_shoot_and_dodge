@@ -16,6 +16,8 @@ namespace AkaneTools.BulletHell.Timeline
         private int BulletCount = 1;
         [SerializeField, Range(1, 36)]
         private int DirectionCount = 1;
+        [SerializeField, Range(-359f, 359f)]
+        private float BaseAngle = 0f;
         [SerializeField]
         private float AngleStep = 5;
         [SerializeField, Range(-359f, 359f)]
@@ -36,6 +38,7 @@ namespace AkaneTools.BulletHell.Timeline
             behaviour.Pattern = Pattern;
             behaviour.BulletCount = BulletCount;
             behaviour.DirectionCount = DirectionCount;
+            behaviour.BaseAngle = BaseAngle;
             behaviour.AngleStep = AngleStep;
             behaviour.AngleOffset = AngleOffset;
             behaviour.Speed = Speed;

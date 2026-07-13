@@ -12,6 +12,7 @@ namespace AkaneTools.BulletHell.Timeline
         public BulletFirePattern Pattern = BulletFirePattern.Simple;
         public int BulletCount = 0;
         public int DirectionCount = 0;
+        public float BaseAngle = 0;
         public float AngleStep = 0;
         public float AngleOffset = 0;
         public float Speed = 0;
@@ -50,6 +51,8 @@ namespace AkaneTools.BulletHell.Timeline
             {
                 _nextFireTime += FireInterval;
 
+                Fire(playerData as Transform);
+
                 _currentAngleOffset += AngleOffset;
 
                 //360‚ð’´‚¦‚½‚ç0‚É–ß‚·
@@ -57,8 +60,6 @@ namespace AkaneTools.BulletHell.Timeline
                 {
                     _currentAngleOffset -= _isAntiCrock ? 360f : -360f;
                 }
-
-                Fire(playerData as Transform);
             }
         }
 
@@ -68,6 +69,7 @@ namespace AkaneTools.BulletHell.Timeline
             {
                 BulletCount = this.BulletCount,
                 DirectionCount = this.DirectionCount,
+                BaseAngle = this.BaseAngle,
                 AngleStep = this.AngleStep,
                 AngleOffset = _currentAngleOffset,
                 Speed = this.Speed,
