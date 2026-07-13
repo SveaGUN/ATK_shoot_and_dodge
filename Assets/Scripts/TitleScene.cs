@@ -33,6 +33,7 @@ public class TitleScene : MonoBehaviour
 
     private void Awake()
     {
+        Application.targetFrameRate = 60;
         var platform = Application.platform;
 
         _animator = GetComponent<Animator>();
@@ -108,7 +109,7 @@ public class TitleScene : MonoBehaviour
         _animator.SetTrigger(s_outroId);
 
         //BGMをフェードアウトさせる。フェードアウトの時間は、アニメーションの長さに応じて変化する
-        AudioManager.Instance.FadeOutBGM(1 / animationLength);
+        AudioManager.Instance.FadeOutBGM(1 / animationLength + 0.5f);
 
         //現在再生されているアニメーションの長さに応じて待機する
         yield return new WaitForSeconds(animationLength);
